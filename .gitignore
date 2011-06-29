@@ -1,4 +1,1 @@
-[A-Za-z]*
-*.swp
-*.swo
-.local
+*
