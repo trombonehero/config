@@ -1,0 +1,12 @@
+[user]
+	name = Jonathan Anderson
+	email = jonathan.anderson@ieee.org
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+
