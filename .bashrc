@@ -1,3 +1,7 @@
+# Use Vim as the default editor.
+export EDITOR=vim
+
+
 # Pretty colours and bash prompt
 export CLICOLOR=1
 
