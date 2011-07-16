@@ -1,3 +1,8 @@
+" do some Windows-like things (e.g. play nice with highlights and arrow keys)
+source $VIMRUNTIME/mswin.vim
+behave mswin
+set winaltkeys=yes
+
 " Do regular Vim things, too.
 source $HOME/.vimrc
 
