@@ -22,9 +22,8 @@ set autoread
 syntax on
 colorscheme darkblue
 
-" I know, I know... 3 spaces/tab is just CRAZY.
-set tabstop=3
-set shiftwidth=3
+set tabstop=8
+set shiftwidth=8
 
 " formatting
 set cindent
