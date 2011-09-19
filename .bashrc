@@ -33,6 +33,11 @@ if [ -e "/usr/local/android" ]; then
 	export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 fi
 
+# Path
+if [ -e "/usr/local/sbin" ]; then
+	export PATH=$PATH:/usr/local/sbin
+fi
+
 # Use the Homebrew version of Python.
 if [ -e "/usr/local/bin/brew" ] && [ -e "/usr/local/share/python" ]; then
 	export PATH=/usr/local/share/python:$PATH
