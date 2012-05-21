@@ -42,6 +42,11 @@ if [ -e "/usr/local/sbin" ]; then
 	export PATH=$PATH:/usr/local/sbin
 fi
 
+# Python: use ipython by default.
+if [ "`which ipython`" != "" ]; then
+	alias python=ipython
+fi
+
 # Use the Homebrew version of Python.
 if [ -e "/usr/local/bin/brew" ] && [ -e "/usr/local/share/python" ]; then
 	export PATH=/usr/local/share/python:$PATH
