@@ -22,8 +22,8 @@ set autoread
 syntax on
 colorscheme darkblue
 
-set tabstop=8
-set shiftwidth=8
+set tabstop=3
+set shiftwidth=3
 
 " formatting
 set cindent
