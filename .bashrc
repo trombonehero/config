@@ -21,6 +21,10 @@ else
 	export PS1="[${GREEN}\u@\h ${BLUE}\w${NONE}]\$ "
 fi
 
+if [ "`/usr/bin/which colordiff`" != "" ]; then
+	alias diff=`/usr/bin/which colordiff`
+fi
+
 
 # Aliases
 if [ -e "${HOME}/.bash_aliases" ]; then
