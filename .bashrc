@@ -28,7 +28,7 @@ fi
 
 # Aliases
 if [ -e "${HOME}/.bash_aliases" ]; then
-	source ${HOME}/.bash_aliases
+	. ${HOME}/.bash_aliases
 fi
 
 # Android
@@ -62,6 +62,6 @@ fi
 
 # Finally, local configuration (e.g. Perforce clients)
 if [ -e "${HOME}/.local/profile" ]; then
-	source ${HOME}/.local/profile
+	. ${HOME}/.local/profile
 fi
 
