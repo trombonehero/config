@@ -10,3 +10,5 @@
 	ui = true
 	pager = true
 
+[core]
+	excludesfile = $HOME/.git-global-ignore
