@@ -52,6 +52,9 @@ if [ -e "/usr/local/bin/brew" ] && [ -e "/usr/local/share/python" ]; then
 	export PATH=/usr/local/share/python:$PATH
 fi
 
+# Prefer /usr/local/bin/foo to /usr/bin/foo (e.g. Postgresql)
+export PATH=/usr/local/bin:$PATH
+
 # Just-for-me binaries (take precedence over all others)
 if [ -e "${HOME}/bin" ]; then
 	export PATH=${HOME}/bin:$PATH
