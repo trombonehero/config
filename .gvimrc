@@ -10,7 +10,7 @@ source $HOME/.vimrc
 set columns=84
 
 " I like this font.
-set guifont=Monaco:h12
+set guifont=Droid\ Sans\ Mono:h14
 
 " I like blue.
 colorscheme darkblue
