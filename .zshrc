@@ -31,7 +31,7 @@ alias lla='ls -alh'
 # Pretty colors for the command line.
 export CLICOLOR=1
 PS1="%F{default}[%F{green}%m %F{blue}%3~%F{default}]%(!.#.\$) "
-RPROMPT='%F{yellow}%*'
+RPROMPT='%F{blue}%*'
 
 # Android
 if [ -d "/usr/local/android" ]; then
