@@ -11,4 +11,4 @@
 	pager = true
 
 [core]
-	excludesfile = $HOME/.git-global-ignore
+	excludesfile = ~/.git-global-ignore
