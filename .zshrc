@@ -45,7 +45,7 @@ if [ -d "/usr/local/sbin" ]; then
 fi
 
 # Python: use ipython by default.
-if [ "`which ipython`" != "" ]; then
+if [ "`whence ipython`" != "" ]; then
 	alias python=ipython
 fi
 
