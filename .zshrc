@@ -30,7 +30,7 @@ alias lla='ls -alh'
 
 # Pretty colors for the command line.
 export CLICOLOR=1
-PS1="%F{default}[%F{green}%m %F{blue}%3~%F{default}]%(!.#.\$) "
+PS1="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]%(!.#.\$) "
 RPROMPT='%F{blue}%*'
 
 # Android
