@@ -62,3 +62,8 @@ if [ -d "$HOME/bin" ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
+# Finally, local configuration.
+if [ -e "$HOME/.local/profile" ]; then
+	source $HOME/.local/profile
+fi
+
