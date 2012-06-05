@@ -15,6 +15,15 @@ set number
 set linebreak
 set showbreak=>>>\ 
 
+" Show tabs.
+set listchars=tab:»\ 
+highlight Tab ctermfg=darkgray guifg=Blue
+match Tab /\t/
+
+" Highlight extra whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\| \+\ze\t/
+
 " re-read externally edited files
 set autoread
 
