@@ -20,6 +20,7 @@ export REPORTTIME=10
 bindkey '^R' history-incremental-search-backward
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+bindkey '^[[3~' delete-char
 
 
 # Aliases.
