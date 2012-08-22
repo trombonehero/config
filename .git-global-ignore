@@ -4,3 +4,15 @@
 *.lyx~
 \#*.lyx\#
 .picasa.ini
+
+# LaTeX noise
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+
