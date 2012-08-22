@@ -1,2 +1,3 @@
 EDITOR=vim
+SVN_EDITOR=$EDITOR
 
