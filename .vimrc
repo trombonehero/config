@@ -17,8 +17,8 @@ set showbreak=>>>\
 
 " Show tabs.
 set listchars=tab:»\ 
-highlight Tab ctermfg=darkgray guifg=Blue
-match Tab /\t/
+au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=Blue
+set list
 
 " Highlight extra whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
