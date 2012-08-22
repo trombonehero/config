@@ -15,3 +15,9 @@ set guifont=Droid\ Sans\ Mono:h14
 " I like blue.
 colorscheme darkblue
 
+" Remove right-hand scrollbar.
+set guioptions-=r
+
+" Remove toolbar.
+set guioptions-=T
+
