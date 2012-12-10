@@ -44,7 +44,27 @@ set tabstop=3
 set shiftwidth=3
 
 " formatting
-set cindent
+
+" C/C++ programming helpers
+augroup csrc
+  au!
+  autocmd FileType *      set nocindent smartindent
+  autocmd FileType c,cpp  set cindent
+augroup END
+
+" Set a few indentation parameters. See the VIM help for cinoptions-values for
+" details.  These aren't absolute rules; they're just an approximation of
+" common style in LLVM source.
+set cinoptions=:0,g0,(0,Ws,l1
+
+" Add and delete spaces in increments of `shiftwidth' for tabs
+set smarttab
+
+" Expand tabs to spaces in C++ files only.
+set noexpandtab
+"autocmd FileType cpp set expandtab
+
+"set cindent
 set formatoptions=croqlt
 
 " printing
