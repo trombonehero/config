@@ -9,9 +9,10 @@ source $HOME/.vimrc
 " Sensible line lengths.
 set columns=84
 
-" I like this font.
-set guifont=Droid\ Sans\ Mono:h14
-
 " I like blue.
 colorscheme darkblue
+
+if filereadable($HOME . '/.local/gvimrc')
+	source $HOME/.local/gvimrc
+endif
 
