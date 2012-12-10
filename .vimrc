@@ -16,7 +16,7 @@ set linebreak
 set showbreak=>>>\ 
 
 " Show tabs.
-set listchars=tab:Â»\ 
+set listchars=tab:»\ 
 highlight Tab ctermfg=darkgray guifg=Blue
 match Tab /\t/
 
