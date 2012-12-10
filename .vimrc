@@ -16,8 +16,9 @@ set linebreak
 set showbreak=>>>\ 
 
 " Show tabs.
-set listchars=tab:Â»\ 
+set listchars=tab:»\ 
 au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=Blue
+highlight Tab ctermfg=darkgray guifg=Blue
 set list
 
 " Highlight extra whitespace.
@@ -92,4 +93,10 @@ nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>f :cs find f <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>i :cs find i <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+
+" Finally, local options to override these defaults...
+if filereadable($HOME . '/.local/vimrc')
+	source $HOME/.local/vimrc
+endif
 
