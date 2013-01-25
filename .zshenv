@@ -1,4 +1,4 @@
-CMAKE_ARGS="-G Ninja"
-EDITOR=vim
-SVN_EDITOR=$EDITOR
+export BUILDENV_SHELL=$SHELL
+export CMAKE_ARGS="-G Ninja"
+export EDITOR=vim
 
