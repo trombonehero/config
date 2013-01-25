@@ -1,4 +1,3 @@
-CMAKE_ARGS="-G Ninja"
-EDITOR=vim
-SVN_EDITOR=$EDITOR
+export CMAKE_ARGS="-G Ninja"
+export EDITOR=vim
 
