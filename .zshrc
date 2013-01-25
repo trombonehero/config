@@ -28,6 +28,7 @@ if [[ "$SSH_AUTH_SOCK" == "" ]]; then
 fi
 
 # Aliases.
+alias diff="`whence colordiff || echo "diff"` -u"
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -alh'
