@@ -35,15 +35,14 @@ set autoread
 
 " use syntax highlighting
 syntax on
-colorscheme darkblue
 
 " Enable syntax highlighting for LLVM files.
 augroup filetype
   au! BufRead,BufNewFile *.ll     set filetype=llvm
 augroup END
 
-set tabstop=3
-set shiftwidth=3
+set tabstop=8
+set shiftwidth=8
 
 " formatting
 
