@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PORTSDIR=/usr/ports
+
+find $PORTSDIR -type d -mindepth 2 -maxdepth 2 \
+		  | grep ".*$*.*" \
+		  | sed "s#^${PORTSDIR}/##"
+
