@@ -22,11 +22,6 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 bindkey '^[[3~' delete-char
 
-# Start SSH agent if there isn't one running.
-if [[ "$SSH_AUTH_SOCK" == "" ]]; then
-	eval `ssh-agent`
-fi
-
 # Aliases.
 alias diff="`whence colordiff || echo "diff"` -u"
 alias ll='ls -lh'
