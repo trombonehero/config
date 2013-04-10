@@ -22,6 +22,12 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 bindkey '^[[3~' delete-char
 
+# Mac-like cursor movement.
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+bindkey '[G' backward-kill-word     # opt-backspace
+bindkey '[H' kill-word              # opt-delete
+
 # Aliases.
 alias diff="`whence colordiff || echo "diff"` -u"
 alias ll='ls -lh'
