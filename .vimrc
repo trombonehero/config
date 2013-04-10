@@ -16,6 +16,9 @@ set relativenumber
 set linebreak
 set showbreak=>>>\ 
 
+" keep a fair bit of history
+set history=256
+
 " Show tabs.
 set listchars=tab:»\ 
 au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=Blue
