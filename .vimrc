@@ -9,7 +9,6 @@ set incsearch
 set hlsearch
 
 " always show line numbers relative to the current position
-set number
 set relativenumber
 
 " line break
