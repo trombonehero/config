@@ -8,8 +8,8 @@ set tenc=utf-8
 set incsearch
 set hlsearch
 
-" always show line numbers relative to the current position
-set relativenumber
+" line numbers
+set number
 
 " line break
 set linebreak
