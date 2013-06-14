@@ -1,0 +1,29 @@
+#!/bin/sh
+
+if [ "$1" == "" ]; then
+	echo "Usage: $0 <VMX filename pattern> <command>"
+	exit 1
+fi
+
+VMX_FILE=`find $HOME/Documents/Virtual\ Machines.localized -name "$1.vmx"`
+if [ "${VMX_FILE}" == "" ]; then
+	echo "ERROR: no VMX file matches pattern '$1'"
+	exit 1
+fi
+
+COUNT=`echo "$VMX_FILE" | wc -l`
+if [ ${COUNT} -gt 1 ]; then
+	echo "ERROR: multiple VMX files match pattern '$1':"
+	echo "${VMX_FILE}"
+	exit 1
+fi
+
+COMMAND=$2
+if [ "$2" == "" ]; then
+	echo "Usage: $0 <VMX filename pattern> <command>"
+	exit 1
+fi
+
+echo "${COMMAND} ${VMX_FILE} ..."
+/Applications/VMware\ Fusion.app/Contents/Library/vmrun \
+	-T fusion ${COMMAND} "$VMX_FILE" nogui
