@@ -60,7 +60,12 @@ if [ -d "$HOME/bin" ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
-# Finally, local configuration.
-if [ -e "$HOME/.local/profile" ]; then
+#
+# Finally, local configuration: either a zsh-specific profile (which may
+# source the generic profile) or, if that doesn't exist, the generic profile.
+#
+if [ -e "$HOME/.local/zprofile" ]; then
+	source $HOME/.local/zprofile
+elif [ -e "$HOME/.local/profile" ]; then
 	source $HOME/.local/profile
 fi
