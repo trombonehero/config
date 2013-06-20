@@ -69,4 +69,3 @@ fi
 if [ -e "$HOME/.local/profile" ]; then
 	source $HOME/.local/profile
 fi
-
