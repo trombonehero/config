@@ -39,33 +39,3 @@ alias lla='ls -alh'
 export CLICOLOR=1
 PS1="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]%(!.#.\$) "
 RPROMPT='%F{blue}%*'
-
-# Path
-if [ -d "/usr/local/sbin" ]; then
-	export PATH=$PATH:/usr/local/sbin
-fi
-
-# Python: use ipython by default.
-if [ "`whence ipython3`" != "" ]; then
-	alias python="python3 `whence ipython3`"
-elif [ "`whence ipython`" != "" ]; then
-	alias python=ipython
-fi
-
-# Prefer /usr/local/bin/foo to /usr/bin/foo (e.g. Postgresql)
-export PATH=/usr/local/bin:$PATH
-
-# Just-for-me binaries (take precedence over all others)
-if [ -d "$HOME/bin" ]; then
-	export PATH=$HOME/bin:$PATH
-fi
-
-#
-# Finally, local configuration: either a zsh-specific profile (which may
-# source the generic profile) or, if that doesn't exist, the generic profile.
-#
-if [ -e "$HOME/.local/zprofile" ]; then
-	source $HOME/.local/zprofile
-elif [ -e "$HOME/.local/profile" ]; then
-	source $HOME/.local/profile
-fi
