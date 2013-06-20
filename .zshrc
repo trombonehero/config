@@ -40,12 +40,6 @@ export CLICOLOR=1
 PS1="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]%(!.#.\$) "
 RPROMPT='%F{blue}%*'
 
-# Android
-if [ -d "/usr/local/android" ]; then
-	export ANDROID_HOME=/usr/local/android
-	export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-fi
-
 # Path
 if [ -d "/usr/local/sbin" ]; then
 	export PATH=$PATH:/usr/local/sbin
