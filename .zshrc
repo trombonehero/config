@@ -39,3 +39,6 @@ alias lla='ls -alh'
 export CLICOLOR=1
 PS1="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]%(!.#.\$) "
 RPROMPT='%F{blue}%*'
+
+# Shell completion for teamocil.
+compctl -g '~/.teamocil/*(:t:r)' teamocil
