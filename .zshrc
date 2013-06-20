@@ -52,11 +52,6 @@ elif [ "`whence ipython`" != "" ]; then
 	alias python=ipython
 fi
 
-# Use the Homebrew version of Python.
-if [ -d "/usr/local/bin/brew" ] && [ -d "/usr/local/share/python" ]; then
-	export PATH=/usr/local/share/python:$PATH
-fi
-
 # Prefer /usr/local/bin/foo to /usr/bin/foo (e.g. Postgresql)
 export PATH=/usr/local/bin:$PATH
 
