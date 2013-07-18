@@ -8,9 +8,7 @@ if [ -d "/usr/local/sbin" ]; then
 fi
 
 # Python: use ipython by default.
-if [ "`whence ipython3`" != "" ]; then
-	alias python="python3 `whence ipython3`"
-elif [ "`whence ipython`" != "" ]; then
+if [ "`whence ipython`" != "" ]; then
 	alias python=ipython
 fi
 
