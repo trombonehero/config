@@ -18,6 +18,27 @@ set showbreak=>>>\
 " keep a fair bit of history
 set history=256
 
+" always show the status line
+set laststatus=2
+
+" a sensible status line; a modified version of the one at
+" http://got-ravings.blogspot.co.uk/2008/08/vim-pr0n-making-statuslines-that-own.html
+set statusline=%f                " filename
+set statusline+=\                " space
+set statusline+=%h               " help file flag
+set statusline+=%m               " modified flag
+set statusline+=%r               " read only flag
+set statusline+=[%l:             " cursor line
+set statusline+=%c]              " cursor column
+set statusline+=%=               " left/right separator
+set statusline+=\ \ \ \ \ \      " minimum spacing between left & right
+set statusline+=%y               " filetype
+set statusline+=[
+set statusline+=%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}           " file format
+set statusline+=]
+
+
 " Show tabs.
 set listchars=tab:»\ 
 au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=Blue
