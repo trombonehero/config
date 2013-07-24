@@ -6,3 +6,5 @@ alias lla='ls -alh'
 # quota
 alias quota="quota --human-readable"
 
+# syntax-highlighed cat
+alias ccat="pygmentize -g"
