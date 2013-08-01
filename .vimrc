@@ -44,6 +44,12 @@ set listchars=tab:»\
 au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=DarkSlateBlue
 set list
 
+" Show the current cursor location
+set cursorline
+highlight CursorLine ctermbg=DarkGrey
+au InsertEnter * highlight CursorLine ctermbg=DarkBlue
+au InsertLeave * highlight CursorLine ctermbg=DarkGrey
+
 " Highlight extra whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/

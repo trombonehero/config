@@ -12,6 +12,21 @@ set columns=84
 " I like blue.
 colorscheme darkblue
 
+" Colour customisations.
+highlight SpecialKey guifg=DarkSlateBlue
+
+function SetInsertColours()
+  if &readonly
+    highlight CursorLine guibg=Red
+  else
+    highlight CursorLine guibg=DarkOrchid4
+  endif
+endfunction
+
+highlight CursorLine guibg=MidnightBlue
+au InsertEnter * call SetInsertColours()
+au InsertLeave * highlight CursorLine guibg=MidnightBlue
+
 " Remove right-hand scrollbar.
 set guioptions-=r
 
