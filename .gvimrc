@@ -14,10 +14,10 @@ colorscheme darkblue
 
 " Show tabs.
 set listchars=tab:»\ 
-au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=DarkSlateBlue
+highlight SpecialKey guifg=DarkSlateBlue
+au BufRead,BufNewFile * highlight SpecialKey guifg=DarkSlateBlue
 set list
 
-highlight SpecialKey guifg=DarkSlateBlue
 
 " CursorLine colours for the GUI environment.
 function SetInsertColours()
