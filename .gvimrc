@@ -12,9 +12,14 @@ set columns=84
 " I like blue.
 colorscheme darkblue
 
-" Colour customisations.
+" Show tabs.
+set listchars=tab:»\ 
+au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=DarkSlateBlue
+set list
+
 highlight SpecialKey guifg=DarkSlateBlue
 
+" CursorLine colours for the GUI environment.
 function SetInsertColours()
   if &readonly
     highlight CursorLine guibg=Red

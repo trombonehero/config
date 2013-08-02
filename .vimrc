@@ -39,11 +39,6 @@ set statusline+=%{&ff}           " file format
 set statusline+=]
 
 
-" Show tabs.
-set listchars=tab:»\ 
-au BufRead,BufNewFile * highlight SpecialKey ctermfg=darkgray guifg=DarkSlateBlue
-set list
-
 " Show the current cursor location
 set cursorline
 highlight CursorLine cterm=bold
