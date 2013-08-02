@@ -48,8 +48,6 @@ au InsertLeave * highlight CursorLine cterm=bold
 " Highlight extra whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
-
-" Try to preserve the above across colour scheme changes.
 au InsertEnter * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " re-read externally edited files
