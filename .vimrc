@@ -42,8 +42,17 @@ set statusline+=]
 " Show the current cursor location
 set cursorline
 highlight CursorLine cterm=bold
-au InsertEnter * highlight CursorLine cterm=underline
-au InsertLeave * highlight CursorLine cterm=bold
+
+function SetCTermInsertColours()
+  if &readonly
+    highlight CursorLine ctermbg=DarkRed
+  else
+    highlight CursorLine cterm=bold,underline
+  endif
+endfunction
+
+au InsertEnter * call SetCTermInsertColours()
+au InsertLeave * highlight CursorLine cterm=bold ctermbg=black
 
 " Highlight extra whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
