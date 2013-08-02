@@ -46,9 +46,9 @@ set list
 
 " Show the current cursor location
 set cursorline
-highlight CursorLine ctermbg=DarkGrey
-au InsertEnter * highlight CursorLine ctermbg=DarkBlue
-au InsertLeave * highlight CursorLine ctermbg=DarkGrey
+highlight CursorLine cterm=bold
+au InsertEnter * highlight CursorLine cterm=underline
+au InsertLeave * highlight CursorLine cterm=bold
 
 " Highlight extra whitespace.
 highlight ExtraWhitespace ctermbg=red guibg=red
