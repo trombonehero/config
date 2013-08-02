@@ -36,4 +36,3 @@ set guioptions-=T
 if filereadable($HOME . '/.local/gvimrc')
 	source $HOME/.local/gvimrc
 endif
-
