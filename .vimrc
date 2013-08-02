@@ -50,7 +50,6 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Try to preserve the above across colour scheme changes.
-au InsertEnter * highlight Tab ctermfg=darkgray guifg=DarkSlateBlue
 au InsertEnter * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " re-read externally edited files
