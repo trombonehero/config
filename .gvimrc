@@ -18,6 +18,8 @@ highlight SpecialKey guifg=DarkSlateBlue
 au BufRead,BufNewFile * highlight SpecialKey guifg=DarkSlateBlue
 set list
 
+" Nicer status line colours.
+highlight StatusLine guibg=MidnightBlue guifg=CornflowerBlue
 
 " CursorLine colours for the GUI environment.
 function SetInsertColours()

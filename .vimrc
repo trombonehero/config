@@ -38,6 +38,7 @@ set statusline+=%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}           " file format
 set statusline+=]
 
+highlight StatusLine cterm=bold ctermbg=DarkBlue ctermfg=Grey
 
 " Show the current cursor location
 set cursorline
