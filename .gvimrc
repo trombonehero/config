@@ -7,6 +7,16 @@ set columns=84
 " I like blue.
 colorscheme darkblue
 
+highlight Comment guifg=CornflowerBlue
+
+highlight Identifier guifg=SkyBlue
+highlight Function guifg=DeepSkyBlue
+
+highlight Statement guifg=LightGoldenrod
+highlight Label guifg=Goldenrod
+
+highlight Type guifg=PaleGreen3
+
 " Show tabs.
 set listchars=trail:·,precedes:«,extends:»,tab:»\ 
 highlight SpecialKey guifg=DarkSlateBlue
