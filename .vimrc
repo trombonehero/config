@@ -1,6 +1,9 @@
 " Show the last command
 set showcmd
 
+" Allow backspace.
+set backspace=start,indent,eol
+
 " Unicode
 set encoding=utf-8
 set termencoding=utf-8
