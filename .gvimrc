@@ -8,7 +8,7 @@ set columns=84
 colorscheme darkblue
 
 " Show tabs.
-set listchars=tab:Â»\ 
+set listchars=trail:·,precedes:«,extends:»,tab:»\ 
 highlight SpecialKey guifg=DarkSlateBlue
 au BufRead,BufNewFile * highlight SpecialKey guifg=DarkSlateBlue
 set list
