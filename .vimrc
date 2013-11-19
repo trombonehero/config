@@ -106,6 +106,11 @@ set formatoptions=croqlt
 " printing
 set printoptions=number:y
 
+" auto-completion
+set completeopt=menu,menuone,longest
+let g:SuperTabDefaultCompletionType = "context"
+let g:clang_complete_copen = 1    " show Clang errors in quickfix
+
 " don't clear the xterm on exit
 set t_ti= t_te=
 
