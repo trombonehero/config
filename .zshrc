@@ -42,3 +42,23 @@ RPROMPT='%F{blue}%*'
 
 # Shell completion for teamocil.
 compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+# Python: use ipython by default.
+if [ "`which ipython`" != "" ]; then
+	alias python=ipython
+fi
+
+# Use the Homebrew version of Python.
+if [ -e "/usr/local/bin/brew" ] && [ -e "/usr/local/share/python" ]; then
+	export PATH=/usr/local/share/python:$PATH
+fi
+
+# Local binaries take precedence over all others
+if [ -e "${HOME}/bin" ]; then
+	export PATH=${HOME}/bin:$PATH
+fi
+
+# Finally, local configuration.
+if [ -e "${HOME}/.local/zprofile" ]; then
+	source ${HOME}/.local/zprofile
+fi
