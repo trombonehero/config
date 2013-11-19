@@ -46,7 +46,7 @@ highlight StatusLine cterm=bold ctermbg=DarkBlue ctermfg=Grey
 set cursorline
 highlight CursorLine cterm=bold
 
-function SetCTermInsertColours()
+function! SetCTermInsertColours()
   if &readonly
     highlight CursorLine ctermbg=DarkRed
   else
