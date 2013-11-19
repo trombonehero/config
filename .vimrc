@@ -2,7 +2,9 @@
 set showcmd
 
 " Unicode
-set tenc=utf-8
+set encoding=utf-8
+set termencoding=utf-8
+scriptencoding utf-8
 
 " searching options
 set incsearch
