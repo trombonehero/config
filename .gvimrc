@@ -27,7 +27,7 @@ set list
 highlight StatusLine guibg=MidnightBlue guifg=CornflowerBlue
 
 " CursorLine colours for the GUI environment.
-function SetInsertColours()
+function! SetInsertColours()
   if &readonly
     highlight CursorLine guibg=Red
   else
