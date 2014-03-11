@@ -1,25 +1,19 @@
 #!/bin/sh
 
 #
-# If the hostname isn't specified at the commend line,
-# take it from the name of the current tmux window.
+# If the hostname isn't given, take it from the name of the current tmux window.
 #
-HOSTNAME="$1"
-if [ "$HOSTNAME" == "" ]; then
-	HOSTNAME=`tmux list-panes -F '#{window_name}'`
-fi
+: ${host:="`tmux list-panes -F '#{window_name}'`"}
 
-if [ "$HOSTNAME" == "" ]; then
-	echo "No hostname specified and not running in a tmux session"
+if [ "$host" == "" ]; then
+	echo "$$host not specified and not running in a tmux session"
 	exit 1
 fi
+
 
 #
 # Allow manual specification of the tmux path.
 #
-TMUX="$2"
-if [ "$TMUX" == "" ]; then
-	TMUX="tmux"
-fi
+: ${tmux:="tmux"}
 
-autossh -t -M 0 $HOSTNAME "$TMUX attach || $TMUX"
+autossh -t -M 0 $host $* "$tmux attach || $tmux"
