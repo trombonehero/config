@@ -20,6 +20,6 @@ fi
 #
 # Actually, we don't *have* to use tmux at all...
 #
-: ${command:="tmux attach || $tmux"}
+: ${command:="$tmux attach || $tmux"}
 
 autossh -t -M 0 $host $* "$command"
