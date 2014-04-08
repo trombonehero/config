@@ -18,8 +18,14 @@ fi
 
 
 #
+# Allow session name specification.
+#
+: ${session:="joe"}
+
+
+#
 # Actually, we don't *have* to use tmux at all...
 #
-: ${command:="$tmux attach || $tmux"}
+: ${command:="$tmux attach -t $session || $tmux new-session -s $session"}
 
 autossh -t -M 0 $host $* "$command"
