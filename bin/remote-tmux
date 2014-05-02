@@ -10,6 +10,10 @@ if [ "$host" == "" ]; then
 	exit 1
 fi
 
+#
+# If the target session name isn't given, take it from the local session name.
+#
+: ${session:="`if [ "$TMUX" != "" ]; then tmux list-panes -F '#{session_name}'; else echo 0; fi `"}
 
 #
 # Allow manual specification of the tmux path.
