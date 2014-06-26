@@ -48,11 +48,6 @@ if [ "`which ipython`" != "" ]; then
 	alias python=ipython
 fi
 
-# Use the Homebrew version of Python.
-if [ -e "/usr/local/bin/brew" ] && [ -e "/usr/local/share/python" ]; then
-	export PATH=/usr/local/share/python:$PATH
-fi
-
 # Local binaries take precedence over all others
 if [ -e "${HOME}/bin" ]; then
 	export PATH=${HOME}/bin:$PATH
