@@ -39,14 +39,14 @@ git_branch_prompt() {
 	local branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
 
 	if [ $branch ]; then
-		print "[%F{green}$branch%F{default}]"
+		print "[%F{cyan}$branch%F{default}]"
 	fi
 }
 
 # Pretty colors for the command line.
 export CLICOLOR=1
 setopt PROMPT_SUBST
-PROMPT="%F{default}[%(!.%F{red}.%F{magenta})%m %F{blue}%2~%F{default}]"
+PROMPT="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%2~%F{default}]"
 PROMPT="${PROMPT}\$(git_branch_prompt)"
 PROMPT="${PROMPT}%(!.#.\$) "
 RPROMPT='%F{blue}%*'
