@@ -17,6 +17,12 @@ highlight Label guifg=Goldenrod
 
 highlight Type guifg=PaleGreen3
 
+highlight SignColumn guibg=#000040
+
+highlight GitGutterAddDefault guibg=#000040
+highlight GitGutterChangeDefault guibg=#000040
+highlight GitGutterDeleteDefault guibg=#000040
+
 " Show tabs.
 set listchars=trail:·,precedes:«,extends:»,tab:»\ 
 highlight SpecialKey guifg=DarkSlateBlue
