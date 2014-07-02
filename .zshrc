@@ -55,7 +55,7 @@ RPROMPT='%F{blue}%*'
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 # Python: use ipython by default.
-if [ "`which ipython`" != "" ]; then
+if [ "`whence ipython`" != "" ]; then
 	alias python=ipython
 fi
 
