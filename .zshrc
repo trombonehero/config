@@ -34,10 +34,21 @@ alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -alh'
 
+# Git branches on the command line.
+git_branch_prompt() {
+	local branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
+
+	if [ $branch ]; then
+		print "[%F{green}$branch%F{default}]"
+	fi
+}
 
 # Pretty colors for the command line.
 export CLICOLOR=1
-PS1="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]%(!.#.\$) "
+setopt PROMPT_SUBST
+PROMPT="%F{default}[%(!.%F{red}.%F{green})%m %F{blue}%3~%F{default}]"
+PROMPT="${PROMPT}\$(git_branch_prompt)"
+PROMPT="${PROMPT}%(!.#.\$) "
 RPROMPT='%F{blue}%*'
 
 # Shell completion for teamocil.
