@@ -46,7 +46,7 @@ git_branch_prompt() {
 # Pretty colors for the command line.
 export CLICOLOR=1
 setopt PROMPT_SUBST
-PROMPT="%F{default}[%(!.%F{red}.%F{magenta})%m %F{blue}%3~%F{default}]"
+PROMPT="%F{default}[%(!.%F{red}.%F{magenta})%m %F{blue}%2~%F{default}]"
 PROMPT="${PROMPT}\$(git_branch_prompt)"
 PROMPT="${PROMPT}%(!.#.\$) "
 RPROMPT='%F{blue}%*'
