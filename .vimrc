@@ -18,6 +18,7 @@ set hlsearch
 
 " line numbers
 set number
+set numberwidth=5
 
 " line break
 set linebreak
