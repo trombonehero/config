@@ -1,3 +1,6 @@
+" Default to 80-column lines.
+set textwidth=80
+
 " Show the last command
 set showcmd
 
