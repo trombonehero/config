@@ -19,6 +19,8 @@ highlight Type guifg=PaleGreen3
 
 highlight SignColumn guibg=#000040
 
+" Highlight characters over the textwidth.
+highlight ColorColumn guibg=MidnightBlue guifg=DarkRed
 highlight GitGutterAddDefault guibg=#000040
 highlight GitGutterChangeDefault guibg=#000040
 highlight GitGutterDeleteDefault guibg=#000040

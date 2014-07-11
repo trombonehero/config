@@ -47,6 +47,10 @@ set statusline+=%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}           " file format
 set statusline+=]
 
+" Highlight characters over the textwidth.
+let &colorcolumn="+" . join(range(1,200), ",+")
+highlight ColorColumn ctermfg=DarkRed
+
 highlight StatusLine cterm=bold ctermbg=DarkBlue ctermfg=Grey
 
 " Show the current cursor location
