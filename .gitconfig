@@ -12,7 +12,5 @@
 
 [core]
 	excludesfile = ~/.git-global-ignore
-[push]
-	default = simple
 [branch]
 	autosetuprebase = always
