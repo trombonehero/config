@@ -21,7 +21,7 @@ else
 	export PS1="[${GREEN}\u@\h ${BLUE}\w${NONE}]\$ "
 fi
 
-if [ "`/usr/bin/which colordiff`" != "" ]; then
+if [ "`/usr/bin/which colordiff 2> /dev/null`" != "" ]; then
 	alias diff=`/usr/bin/which colordiff`
 fi
 
@@ -43,7 +43,7 @@ if [ -e "/usr/local/sbin" ]; then
 fi
 
 # Python: use ipython by default.
-if [ "`which ipython`" != "" ]; then
+if [ "`which ipython 2> /dev/null`" != "" ]; then
 	alias python=ipython
 fi
 
