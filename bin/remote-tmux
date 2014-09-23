@@ -32,4 +32,11 @@ fi
 #
 : ${command:="$tmux attach -t $session || $tmux new-session -s $session"}
 
-autossh -t -M 0 $host $* "$command"
+
+#
+# Allow extra autossh arguments (e.g., proxy settings).
+#
+: ${ssh_extra:=""}
+
+
+autossh -t -M 0 $ssh_extra $host $* "$command"
