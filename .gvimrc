@@ -47,8 +47,9 @@ highlight CursorLine guibg=MidnightBlue
 au InsertEnter * call SetInsertColours()
 au InsertLeave * highlight CursorLine guibg=MidnightBlue
 
-" Remove right-hand scrollbar.
+" Remove scrollbars.
 set guioptions-=r
+set guioptions-=L
 
 " Remove toolbar.
 set guioptions-=T
