@@ -154,3 +154,4 @@ if filereadable($HOME . '/.local/vimrc')
 	source $HOME/.local/vimrc
 endif
 
+let g:airline_powerline_fonts = 1
