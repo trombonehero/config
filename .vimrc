@@ -1,5 +1,5 @@
 " Default to 80-column lines.
-set textwidth=80
+if &textwidth == 0 | set textwidth=80 | endif
 
 " Show the last command
 set showcmd
