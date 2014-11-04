@@ -30,6 +30,9 @@ set history=256
 " always show the status line
 set laststatus=2
 
+" default to latex
+let g:tex_flavor='latex'
+
 " a sensible status line; a modified version of the one at
 " http://got-ravings.blogspot.co.uk/2008/08/vim-pr0n-making-statuslines-that-own.html
 set statusline=%f                " filename
