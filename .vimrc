@@ -48,7 +48,7 @@ set statusline+=%{&ff}           " file format
 set statusline+=]
 
 " Highlight characters over the textwidth.
-let &colorcolumn="+" . join(range(1,200), ",+")
+let &colorcolumn="+1,+2"
 highlight ColorColumn ctermfg=DarkRed
 
 highlight StatusLine cterm=bold ctermbg=DarkBlue ctermfg=Grey
