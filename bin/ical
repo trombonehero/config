@@ -1,0 +1,14 @@
+/usr/local/bin/icalBuddy \
+	--excludeCals "Birthdays,ECE: Junior, ECE: Senior" \
+	--formatOutput \
+	--bullet "" \
+	--includeOnlyEventsFromNowOn \
+	--separateByDate \
+	--showTodaysSection \
+	--propertyOrder title,datetime,location \
+	--excludeEventProps notes,url \
+	--noPropNames \
+	--propertySeparators "|\n  |, |" \
+	--sectionSeparator "" \
+	eventsToday+7
+
