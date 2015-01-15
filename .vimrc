@@ -123,6 +123,10 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabMappingForward = '<c-space>'
 let g:clang_complete_copen = 1    " show Clang errors in quickfix
 
+" Avoid freezing on offending code
+let g:clang_user_options='|| exit 0'
+let g:clang_close_preview=1
+
 " don't clear the xterm on exit
 set t_ti= t_te=
 
