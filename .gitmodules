@@ -1,0 +1,3 @@
+[submodule ".vim/bundle"]
+	path = .vim/bundle
+	url = git@github.com:trombonehero/vim-bundle.git
