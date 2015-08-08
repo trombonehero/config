@@ -1,5 +1,9 @@
 #!/bin/sh
 
-: ${base:="origin/master"}
+base="$1"
+
+if [ "$base" = "" ]; then
+	base="origin/master"
+fi
 
 git log --format=oneline ${base}..
