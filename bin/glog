@@ -1,0 +1,5 @@
+#!/bin/sh
+
+: ${base:="origin/master"}
+
+git log --format=oneline ${base}..
