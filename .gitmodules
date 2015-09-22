@@ -1,3 +1,6 @@
 [submodule ".vim/bundle"]
 	path = .vim/bundle
 	url = https://github.com/trombonehero/vim-bundle.git
+[submodule "texmf/tex/latex/memorial-latex"]
+	path = texmf/tex/latex/memorial-latex
+	url = https://github.com/trombonehero/memorial-latex.git
