@@ -1,11 +1,13 @@
 #!/bin/sh
 
+${VM_ROOT:="~/Virtual Machines"}
+
 if [ "$1" == "" ]; then
 	echo "Usage: $0 <VMX filename pattern> <command>"
 	exit 1
 fi
 
-VMX_FILE=`find $HOME/Documents/Virtual\ Machines.localized -name "$1.vmx"`
+VMX_FILE=`find ${VM_ROOT} -name "$1.vmx"`
 if [ "${VMX_FILE}" == "" ]; then
 	echo "ERROR: no VMX file matches pattern '$1'"
 	exit 1
