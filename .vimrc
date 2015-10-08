@@ -90,6 +90,9 @@ augroup END
 set tabstop=8
 set shiftwidth=8
 
+" If we use NERDTree, let it open on the right.
+let g:NERDTreeWinPos = "right"
+
 " formatting
 
 " C/C++ programming helpers
