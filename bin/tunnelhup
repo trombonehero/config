@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pgrep -f '/usr/bin/ssh .* \-L' | xargs kill -HUP
