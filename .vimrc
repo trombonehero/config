@@ -1,3 +1,6 @@
+" Pathogen: Vim plugin manager
+execute pathogen#infect()
+
 " Default to 80-column lines.
 if &textwidth == 0 | set textwidth=80 | endif
 
