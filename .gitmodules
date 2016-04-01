@@ -1,3 +1,6 @@
 [submodule ".vim/bundle"]
 	path = .vim/bundle
 	url = https://github.com/trombonehero/vim-bundle.git
+[submodule ".ssh/public-keys"]
+	path = .ssh/public-keys
+	url = https://github.com/trombonehero/public-keys
