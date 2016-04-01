@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tmpdir="`mktemp -d /tmp/pdf.XXXXXX`"
+: ${tmpdir:="`mktemp -d /tmp/pdf.XXXXXX`"}
 echo "Temporary directory: ${tmpdir}"
 
 latexmk -pdf -xelatex -output-directory=${tmpdir} $* && cp ${tmpdir}/*.pdf .
