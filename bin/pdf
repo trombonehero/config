@@ -3,4 +3,11 @@
 : ${tmpdir:="`mktemp -d /tmp/pdf.XXXXXX`"}
 echo "Temporary directory: ${tmpdir}"
 
-latexmk -pdf -xelatex -output-directory=${tmpdir} $* && cp ${tmpdir}/*.pdf .
+echo "NO_XELATEX: '${NO_XELATEX}'"
+
+if [ "${NO_XELATEX}" == "" ]
+then
+	xelatex="-xelatex"
+fi
+
+latexmk -pdf ${xelatex} -output-directory=${tmpdir} $* && cp ${tmpdir}/*.pdf .
