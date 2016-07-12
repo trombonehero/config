@@ -51,6 +51,11 @@ PROMPT="${PROMPT}\$(git_branch_prompt)"
 PROMPT="${PROMPT}%(!.#.\$) "
 RPROMPT='%F{blue}%*'
 
+# Antigen bundles:
+source ${HOME}/.antigen/antigen.zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle git
+
 # Shell completion for teamocil.
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
