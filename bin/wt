@@ -1,0 +1,8 @@
+#!/bin/sh
+
+: ${op:="0.75"}
+
+xwininfo -tree -root \
+	| grep $* \
+	| awk '{ print $1 }' \
+	| xargs transset ${op} -i
