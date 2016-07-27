@@ -2,7 +2,9 @@
 
 : ${op:="0.75"}
 
-xwininfo -tree -root \
-	| grep $* \
-	| awk '{ print $1 }' \
-	| xargs transset ${op} -i
+win_ids=`xwininfo -tree -root | grep $* | awk '{ print $1 }'`
+
+for id in ${win_ids}
+do
+	transset -i ${id} ${op}
+done
