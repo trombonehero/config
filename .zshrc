@@ -34,6 +34,8 @@ alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -alh'
 
+alias gd='git diff | wdiff -dn | colordiff | less -r'
+
 # Git branches on the command line.
 git_branch_prompt() {
 	local branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
