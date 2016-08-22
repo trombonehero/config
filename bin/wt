@@ -1,6 +1,6 @@
 #!/bin/sh
 
-: ${op:="0.75"}
+: ${op:="0.85"}
 
 win_ids=`xwininfo -tree -root | grep $* | awk '{ print $1 }'`
 
