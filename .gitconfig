@@ -16,3 +16,5 @@
 	autosetuprebase = always
 [include]
 	path = .local/gitconfig
+[github]
+	user = trombonehero
