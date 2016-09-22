@@ -35,6 +35,8 @@ alias la='ls -a'
 alias lla='ls -alh'
 
 alias gd='git diff | wdiff -dn | colordiff | less -r'
+alias gs='git stash'
+alias gsp='git stash pop'
 
 # Git branches on the command line.
 git_branch_prompt() {
