@@ -2,7 +2,7 @@
 source $HOME/.vimrc
 
 " Sensible line lengths.
-let &columns=&textwidth + 5
+let &columns=&textwidth + 7
 
 " I like blue.
 colorscheme darkblue
