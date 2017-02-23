@@ -20,6 +20,11 @@ if [ -d "$HOME/bin" ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
+# Use local Rust configuration, if one exists
+if [ -e "$HOME/.cargo/env" ] ; then
+	source $HOME/.cargo/env
+fi
+
 #
 # Finally, local configuration: either a zsh-specific profile (which may
 # source the generic profile) or, if that doesn't exist, the generic profile.
