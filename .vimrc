@@ -85,8 +85,9 @@ set autoread
 " use syntax highlighting
 syntax on
 
-" Enable syntax highlighting for LLVM files.
+" Enable syntax highlighting for some special file types.
 augroup filetype
+  au! BufRead,BufNewFile *.avdl   set filetype=avro-idl
   au! BufRead,BufNewFile *.ll     set filetype=llvm
 augroup END
 
