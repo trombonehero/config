@@ -7,11 +7,6 @@ if [ -d "/usr/local/sbin" ]; then
 	export PATH=$PATH:/usr/local/sbin
 fi
 
-# Python: use ipython by default.
-if [ "`whence ipython`" != "" ]; then
-	alias python=ipython
-fi
-
 # Prefer /usr/local/bin/foo to /usr/bin/foo (e.g. Postgresql)
 export PATH=/usr/local/bin:$PATH
 
