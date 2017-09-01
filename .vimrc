@@ -88,10 +88,10 @@ set autoread
 " use syntax highlighting
 syntax on
 
-" Enable some additional syntax highlighting.
+" Enable syntax highlighting for some special file types.
 augroup filetype
-  au! BufRead,BufNewFile *.avdl     set filetype=avro-idl
-  au! BufRead,BufNewFile *.ll,*.llo set filetype=llvm
+  au! BufRead,BufNewFile *.avdl   set filetype=avro-idl
+  au! BufRead,BufNewFile *.ll     set filetype=llvm
 augroup END
 
 set tabstop=8
