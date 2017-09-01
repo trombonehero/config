@@ -10,6 +10,9 @@ set showcmd
 " Allow backspace.
 set backspace=start,indent,eol
 
+" Map Ctrl-S to "write"
+map ^S :w<CR>
+
 " Unicode
 set encoding=utf-8
 set termencoding=utf-8
