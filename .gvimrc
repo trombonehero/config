@@ -4,48 +4,11 @@ source $HOME/.vimrc
 " Sensible line lengths.
 let &columns=&textwidth + 7
 
-" I like blue.
-colorscheme darkblue
-
-highlight Comment guifg=CornflowerBlue
-
-highlight Identifier guifg=SkyBlue
-highlight Function guifg=DeepSkyBlue
-
-highlight Statement guifg=LightGoldenrod
-highlight Label guifg=Goldenrod
-
-highlight Type guifg=PaleGreen3
-
-highlight SignColumn guibg=#000040
-
-" Highlight characters over the textwidth.
-highlight ColorColumn guibg=MidnightBlue guifg=DarkRed
-highlight GitGutterAddDefault guibg=#000040
-highlight GitGutterChangeDefault guibg=#000040
-highlight GitGutterDeleteDefault guibg=#000040
-
 " Show tabs.
 set listchars=trail:·,precedes:«,extends:»,tab:»\ 
 highlight SpecialKey guifg=DarkSlateBlue
 au BufRead,BufNewFile * highlight SpecialKey guifg=DarkSlateBlue
 set list
-
-" Nicer status line colours.
-highlight StatusLine guibg=MidnightBlue guifg=CornflowerBlue
-
-" CursorLine colours for the GUI environment.
-function! SetInsertColours()
-  if &readonly
-    highlight CursorLine guibg=Red
-  else
-    highlight CursorLine guibg=DarkOrchid4
-  endif
-endfunction
-
-highlight CursorLine guibg=MidnightBlue
-au InsertEnter * call SetInsertColours()
-au InsertLeave * highlight CursorLine guibg=MidnightBlue
 
 " Remove scrollbars.
 set guioptions-=r
@@ -53,6 +16,20 @@ set guioptions-=L
 
 " Remove toolbar.
 set guioptions-=T
+
+" Set up colour schemes that vary according to sunrise and sunset.
+let g:nd_latitude = '50'
+let g:nd_timeshift = '10'
+let g:nd_themes = [
+  \ ['sunrise+0',  'vimspectr210curve-light', 'light' ],
+  \ ['sunrise+7/8', 'vimspectr210wcurve-dark', 'dark' ],
+  \ ['sunset+1/4', 'vimspectr60flat-dark',    'dark' ],
+  \ ]
+
+call plug#begin('~/.vim/plugged')
+Plug 'nightsense/night-and-day'
+Plug 'nightsense/vimspectr'
+call plug#end()
 
 if filereadable($HOME . '/.local/gvimrc')
 	source $HOME/.local/gvimrc
