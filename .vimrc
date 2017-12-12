@@ -171,5 +171,4 @@ endif
 let g:airline_powerline_fonts = 1
 
 " A nice, warm, dark colour scheme:
-let g:badwolf_darkgutter = 1
-colorscheme badwolf
+colorscheme gruvbox
