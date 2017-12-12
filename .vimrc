@@ -147,18 +147,18 @@ au Syntax {c,cpp} runtime syntax/doxygen.vim
 " LLVM colouring
 au! BufNewFile,BufRead *.ll set syntax=llvm
 
-"" cscope options
-"set cscopetag
-"set csto=0	" check cscope before ctags
-"
-"nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>f :cs find f <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>i :cs find i <C-R>=expand("<cword>")<CR><CR>
-"nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+" cscope options
+set cscopetag
+set csto=0	" check cscope before ctags
+
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
 autocmd BufRead *.yy let g:yacc_uses_cpp=1 | set syntax=yacc
