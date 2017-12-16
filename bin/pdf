@@ -10,4 +10,8 @@ then
 	xelatex="-xelatex"
 fi
 
-latexmk -pdf ${xelatex} -output-directory=${tmpdir} $* && cp ${tmpdir}/*.pdf .
+latexmk \
+	-pdf ${xelatex} \
+	-interaction=nonstopmode \
+	-output-directory=${tmpdir} $* \
+	&& cp ${tmpdir}/*.pdf .

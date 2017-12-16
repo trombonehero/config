@@ -55,6 +55,16 @@ PROMPT="${PROMPT}\$(git_branch_prompt)"
 PROMPT="${PROMPT}%(!.#.\$) "
 RPROMPT='%F{blue}%*'
 
+# Use 256 colours.
+case "$TERM" in
+	screen)
+		export TERM=screen-256color
+		;;
+	xterm)
+		export TERM=xterm-256color
+		;;
+esac
+
 # Antigen bundles:
 source ${HOME}/.antigen/antigen.zsh
 antigen bundle zsh-users/zsh-syntax-highlighting
