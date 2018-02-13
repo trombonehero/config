@@ -34,6 +34,8 @@ alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -alh'
 
+alias lb='llbuild ninja build'
+
 alias gd='git diff | wdiff -dn | colordiff | less -r'
 alias gs='git stash'
 alias gsp='git stash pop'
