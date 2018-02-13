@@ -69,7 +69,10 @@ esac
 
 # Antigen bundles:
 source ${HOME}/.antigen/antigen.zsh
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle cargo
+antigen bundle colored-man-pages
 antigen bundle git
 
 # Shell completion for teamocil.
