@@ -34,9 +34,3 @@ function fish_prompt --description 'Write out the prompt'
     echo -n "$suffix "
     set_color normal
 end
-
-function fish_right_prompt
-    set_color $fish_color_end
-    date +%H:%M:%S
-    echo -n ' '
-end
