@@ -1,6 +1,3 @@
-# name: Informative Vcs
-# author: Mariusz Smykula <mariuszs at gmail.com>
-
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
     set -l color_cwd
