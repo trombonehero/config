@@ -20,8 +20,12 @@ function fish_prompt --description 'Write out the prompt'
 
     set git_branch (git rev-parse --abbrev-ref HEAD)
     if set -q git_branch
-        echo -n '['(set_color $fish_color_param)"$git_branch"(set_color normal)']'
+	set_color $fish_color_operator
+        echo -n ':'(set_color $fish_color_param)"$git_branch"(set_color normal)
     end
+
+    set_color normal
+    echo -n ']'
 
     if not test $last_status -eq 0
         set_color $fish_color_error
