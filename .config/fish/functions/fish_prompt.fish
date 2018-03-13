@@ -16,7 +16,14 @@ function fish_prompt --description 'Write out the prompt'
             set suffix '$'
     end
 
-    echo -n '['(set_color $color_cwd)(prompt_pwd)(set_color normal)
+    echo -n '['
+
+    set_color $fish_color_host
+    echo -n (hostname -s)' '
+
+    set_color $color_cwd
+    echo -n (prompt_pwd)
+    set_color normal
 
     set git_branch (git rev-parse --abbrev-ref HEAD 2> /dev/null)
     if test $status -eq 0
