@@ -13,6 +13,16 @@ set backspace=start,indent,eol
 " Disable cursor blinking.
 set guicursor+=n-v-c:blinkon0
 
+" Enhance split-window navigation: Ctrl+HJKL instead of C+W C+HJKL
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+" Open new split content below or to the right, not above or to the left
+set splitbelow
+set splitright
+
 " Map Ctrl-S to "write"
 map ^S :w<CR>
 
