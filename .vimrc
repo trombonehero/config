@@ -10,6 +10,9 @@ set showcmd
 " Allow backspace.
 set backspace=start,indent,eol
 
+" Disable cursor blinking.
+set guicursor+=n-v-c:blinkon0
+
 " Map Ctrl-S to "write"
 map ^S :w<CR>
 
