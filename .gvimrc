@@ -10,6 +10,10 @@ highlight SpecialKey guifg=DarkSlateBlue
 au BufRead,BufNewFile * highlight SpecialKey guifg=DarkSlateBlue
 set list
 
+" Add font size manipulation
+map <m--> <Plug>(fontzoom-smaller)
+map <m-=> <Plug>(fontzoom-larger)
+
 " Remove scrollbars.
 set guioptions-=r
 set guioptions-=L
