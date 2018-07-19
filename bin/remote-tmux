@@ -30,7 +30,7 @@ fi
 #
 # Actually, we don't *have* to use tmux at all...
 #
-: ${command:="$tmux attach -t $session || $tmux new-session -s $session"}
+: ${command:="$tmux attach -t $session ; or $tmux new-session -s $session"}
 
 
 #
