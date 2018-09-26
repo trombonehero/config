@@ -2,6 +2,9 @@
 
 : ${PORTSDIR:="/usr/ports"}
 
-find $PORTSDIR -type d -mindepth 2 -maxdepth 2 -name "*$1*" \
-		  | sed "s#^${PORTSDIR}/##"
-
+for portname in $*
+do
+	find $PORTSDIR -type d -mindepth 2 -maxdepth 2 \
+		-name "*$portname*" \
+		| sed "s#${PORTSDIR}##"
+done
