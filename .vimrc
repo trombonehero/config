@@ -49,6 +49,9 @@ set history=256
 " always show the status line
 set laststatus=2
 
+au BufRead,BufNewFile *.g set filetype=antlr3
+au BufRead,BufNewFile *.g4 set filetype=antlr4
+
 " default to latex
 let g:tex_flavor='latex'
 
