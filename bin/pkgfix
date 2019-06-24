@@ -1,0 +1,23 @@
+#!/usr/bin/env fish
+
+if [ -z "$argv[1]" ]
+	echo "Usage:  pkgfix <directory>"
+	exit
+end
+
+#
+# Find all 'foo.pkgnew' files that represent unresolved conflicts. For each one,
+# calculate the diff and either auto-merge or prompt for interactive merge.
+#
+for new in (find $argv[1] -name '*.pkgnew')
+	set orig (string split -r -m1 . $new)[1]
+
+	set the_diff (diff -C0 -u $orig $new)
+
+	if [ $status = 0 ]
+		echo "$new is identical to $orig"
+		rm "$new"
+	else
+		imerge $new $orig
+	end
+end
