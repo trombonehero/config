@@ -1,0 +1,7 @@
+(if
+	(and
+		(is (application_name) "Firefox")
+		(contains (window_name) " - Mozilla Firefox")
+	)
+	(undecorate)
+)
