@@ -1,4 +1,4 @@
-# Defined in /tmp/fish.KjXCep/lla.fish @ line 1
+# Defined in /tmp/fish.xNRPaZ/lla.fish @ line 2
 function lla
 	ls -lah $argv
 end
