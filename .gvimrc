@@ -21,6 +21,9 @@ set guioptions-=L
 " Remove toolbar.
 set guioptions-=T
 
+" Remove menu bar.
+set guioptions-=m
+
 if filereadable($HOME . '/.local/gvimrc')
 	source $HOME/.local/gvimrc
 endif
