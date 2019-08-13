@@ -15,6 +15,7 @@ echo "Installing $latest to $name"
 sudo mkdir /mnt/$latest
 sudo bectl create $name
 sudo bectl mount $name /mnt/$latest
+sudo mount -t nullfs /dev /mnt/$latest/dev
 sudo mount -t nullfs /var/cache /mnt/$latest/var/cache
 
 sudo env ASSUME_ALWAYS_YES=yes pkg -c /mnt/$latest update
