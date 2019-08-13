@@ -1,0 +1,21 @@
+#!/usr/bin/env fish
+
+set ABI (pkg config abi)
+set MAJOR_VERSION (echo $ABI | awk -F: '{ print $2 }')
+
+set REPO_URL "https://allendale.engr.mun.ca/freebsd/current"
+
+set latest (w3m -dump "$REPO_URL/$ABI" \
+	| awk -F/ "/$MAJOR_VERSION/{ print \$1 }" \
+	| tail -n1)
+
+set name (date +%Y-%0m-%0d)
+echo "Installing $latest to $name"
+
+sudo mkdir /mnt/$latest
+sudo bectl create $name
+sudo bectl mount $name /mnt/$latest
+sudo mount -t nullfs /var/cache /mnt/$latest/var/cache
+
+sudo env ASSUME_ALWAYS_YES=yes pkg -c /mnt/$latest update
+sudo env ASSUME_ALWAYS_YES=yes pkg -c /mnt/$latest upgrade
