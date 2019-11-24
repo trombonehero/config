@@ -67,22 +67,6 @@ case "$TERM" in
 		;;
 esac
 
-# Antigen bundles:
-source ${HOME}/.antigen/antigen.zsh
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle cargo
-antigen bundle colored-man-pages
-antigen bundle git
-
-# Shell completion for teamocil.
-compctl -g '~/.teamocil/*(:t:r)' teamocil
-
-# Python: use ipython by default.
-if [ "`whence ipython`" != "" ]; then
-	alias python=ipython
-fi
-
 # Local binaries take precedence over all others
 if [ -e "${HOME}/bin" ]; then
 	export PATH=${HOME}/bin:$PATH
