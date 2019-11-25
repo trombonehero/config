@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ "$1" = "" ]
+then
+	echo "Usage:  csvcat <CSV files>"
+	exit 1
+fi
+
+# Avoid repeating CSV headers.
+headers=`head -n 1 $1`
+
+# Output headers once.
+echo $headers
+
+# Concatenate the remaining files, ignoring any header rows that are identical
+# to the first file's headers. Replace all Windows line endings with Unix ones
+# and filter out any blank lines this generates.
+cat $* | grep -v "$headers" | tr '\r' '\n' | grep -v '^$'
