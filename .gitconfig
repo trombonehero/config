@@ -25,3 +25,8 @@
 	clean = git-lfs clean -- %f
 [merge]
 	conflictstyle = diff3
+[cola]
+	spellcheck = false
+	theme = default
+	statusindent = true
+	fontdiff = Monospace,8,-1,5,50,0,0,0,0,0
