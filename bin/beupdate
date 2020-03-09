@@ -27,8 +27,8 @@ sudo bectl mount $BE_NAME $MOUNTPOINT
 sudo mount -t nullfs /dev $MOUNTPOINT/dev
 sudo mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 
-sudo pkg -c $MOUNTPOINT update
-sudo pkg -c $MOUNTPOINT upgrade -y
+sudo pkg -r $MOUNTPOINT update
+sudo pkg -r $MOUNTPOINT upgrade -y
 
 sudo umount $MOUNTPOINT/var/cache
 sudo umount $MOUNTPOINT/dev
