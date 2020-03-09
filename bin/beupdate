@@ -33,3 +33,4 @@ sudo pkg -c $MOUNTPOINT upgrade -y
 sudo umount $MOUNTPOINT/var/cache
 sudo umount $MOUNTPOINT/dev
 sudo umount $MOUNTPOINT
+sudo rmdir $MOUNTPOINT
