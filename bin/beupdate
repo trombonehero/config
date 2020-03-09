@@ -21,7 +21,7 @@ BE_NAME=`date +%Y-%0m-%0d`
 echo "Installing $LATEST_VERSION to boot environment $BE_NAME"
 
 MOUNTPOINT=/mnt/$LATEST_VERSION
-sudo mkdir $MOUNTPOINT
+sudo mkdir -p $MOUNTPOINT
 sudo bectl create $BE_NAME
 sudo bectl mount $BE_NAME $MOUNTPOINT
 sudo mount -t nullfs /dev $MOUNTPOINT/dev
