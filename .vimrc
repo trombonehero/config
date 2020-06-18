@@ -143,6 +143,9 @@ set formatoptions=croqlt
 " printing
 set printoptions=number:y
 
+" use 'cargo check' by default rather than 'cargo $*'
+let g:cargo_makeprg_params = 'check'
+
 " auto-completion
 set completeopt=menu,menuone,longest
 let g:SuperTabDefaultCompletionType = "context"
