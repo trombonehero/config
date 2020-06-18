@@ -12,10 +12,6 @@ function FindProxyForURL(url, host)
   {
     return "SOCKS localhost:1080";
   }
-  else if (shExpMatch(url, "*.labnet.mun.ca/*"))
-  {
-    return "SOCKS localhost:1080";
-  }
   else if (shExpMatch(url, "*.wds.mun.ca/*"))
   {
     return "SOCKS localhost:1080";
