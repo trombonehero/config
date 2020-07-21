@@ -1,3 +1,5 @@
+// vim: set syntax=javascript:
+
 function FindProxyForURL(url, host)
 {
   if (shExpMatch(url, "*.aits.mun.ca/*"))
