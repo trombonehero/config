@@ -1,4 +1,4 @@
-function ll --description 'List contents of directory using long format'
+function ll --wraps=ls --description 'List contents of directory using long format'
   if which exa > /dev/null
     exa -l --git $argv
   else
