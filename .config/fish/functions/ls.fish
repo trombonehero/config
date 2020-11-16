@@ -1,4 +1,4 @@
-function ls --description 'List contents of directory'
+function ls --wraps=exa --description 'List contents of directory'
   isatty stdout
   and set -a opt -F
 
