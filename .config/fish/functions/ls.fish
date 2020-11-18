@@ -5,6 +5,6 @@ function ls --wraps=exa --description 'List contents of directory'
   if which exa > /dev/null
     exa --git $argv
   else
-    ls --color=auto $argv
+    /bin/ls $argv
   end
 end
