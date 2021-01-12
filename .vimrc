@@ -13,6 +13,9 @@ set backspace=start,indent,eol
 " Disable cursor blinking.
 set guicursor+=n-v-c:blinkon0
 
+" Disable swap files... this ain't the 70s any more
+set noswapfile
+
 " Enhance split-window navigation: Ctrl+HJKL instead of C+W C+HJKL
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
