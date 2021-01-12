@@ -119,6 +119,18 @@ set shiftwidth=8
 " If we use NERDTree, let it open on the right.
 let g:NERDTreeWinPos = "right"
 
+if executable('ag')
+  " Note we extract the column as well as the file and line number
+  set grepprg=ag\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c%m
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
 " formatting
 
 " C/C++ programming helpers
