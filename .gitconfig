@@ -32,3 +32,5 @@
 	fontdiff = Monospace,8,-1,5,50,0,0,0,0,0
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
