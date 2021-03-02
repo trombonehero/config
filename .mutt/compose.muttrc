@@ -1,0 +1,17 @@
+# vim: ft=muttrc
+
+set realname          = "Jonathan Anderson"
+
+set editor            = "vim +':set textwidth=0'"
+bind editor <space> noop
+
+set text_flowed
+
+set query_command     = "lbdbq '%s'"
+set query_format      = "%4c %t %-40.40a %-30.30n  %>\   %?e?(%e)?"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order

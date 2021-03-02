@@ -1,0 +1,24 @@
+# vim: ft=muttrc
+
+set move              = no
+
+set date_format="%Y %b %e %k:%M"
+set attribution="At %d, %n wrote:"
+
+source ~/.mutt/compose.muttrc
+
+macro index,pager d "<save-message>=trash<enter>" "Trash"
+macro index,pager e "<save-message>=archive<enter><enter>" "Archive"
+macro index,pager y "<save-message>=archive<enter><enter>" "Archive"
+macro index,pager S "<save-message>=" "Save to folder"
+
+source ~/.mutt/index.muttrc
+
+auto_view text/html
+alternative_order text/html text/enriched text/plain
+
+source ~/.mutt/index.muttrc
+source ~/.mutt/sidebar.muttrc
+
+source ~/.mutt/gruvbox/colors-gruvbox-shuber.muttrc
+source ~/.mutt/gruvbox/colors-gruvbox-shuber-extended.muttrc
