@@ -4,3 +4,6 @@
 [submodule ".ssh/public-keys"]
 	path = .ssh/public-keys
 	url = https://github.com/trombonehero/public-keys
+[submodule ".mutt/mutt-gruvbox.git"]
+	path = .mutt/gruvbox
+	url = https://git.sthu.org/repos/mutt-gruvbox.git
