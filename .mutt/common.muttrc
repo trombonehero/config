@@ -22,3 +22,6 @@ source ~/.mutt/sidebar.muttrc
 
 source ~/.mutt/gruvbox/colors-gruvbox-shuber.muttrc
 source ~/.mutt/gruvbox/colors-gruvbox-shuber-extended.muttrc
+
+# Make the status bar a bit more interesting (dark brown, not grey)
+color status color234 color94
