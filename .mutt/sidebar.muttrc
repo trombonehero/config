@@ -5,6 +5,6 @@ set sidebar_format    = "%B%?F?  [%F]?%* %?N?%N/?%S"
 set sidebar_visible   = yes
 # color sidebar_new       yellow default
 
-bind index,pager \CP sidebar-prev
-bind index,pager \CN sidebar-next
-bind index,pager \CO sidebar-open
+bind index \CK sidebar-prev
+bind index \CJ sidebar-next
+bind index \CO sidebar-open
