@@ -7,6 +7,7 @@ set attribution="At %d, %n wrote:"
 
 source ~/.mutt/compose.muttrc
 
+macro index,pager I "<change-folder>=INBOX<Enter>" "Go to INBOX"
 macro index,pager S "<save-message>=" "Save to folder"
 
 source ~/.mutt/index.muttrc
