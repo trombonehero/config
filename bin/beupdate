@@ -6,7 +6,9 @@
 
 echo "Updating from $REPO"
 
-ABI=`pkg config abi`
+: ${ABI:="`pkg config abi`"}
+echo "ABI: ${ABI}"
+
 MAJOR_VERSION=`echo $ABI | awk -F: '{ print $2 }'`
 
 REPO_LISTING=`mktemp`
