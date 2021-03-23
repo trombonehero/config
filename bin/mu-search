@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+
+#
+# Search for a message within the specified mu directory and save the results
+# using the Maildir-of-symlinks method.
+#
+
+set -x basedir $argv
+
+read -P 'search: ' query
+
+mu find \
+	--muhome "$basedir" \
+	--format links \
+	--linksdir "$basedir/results" \
+	--clearlinks \
+	$query
