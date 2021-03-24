@@ -1,5 +1,6 @@
 # vim: ft=muttrc
 
+set copy              = no   # don't save sent messages: GMail does this
 set move              = no
 
 set date_format="%Y %b %e %k:%M"
