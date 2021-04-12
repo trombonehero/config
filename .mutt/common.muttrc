@@ -4,7 +4,7 @@ set copy              = no   # don't save sent messages: GMail does this
 set move              = no
 
 set date_format="%Y %b %e %k:%M"
-set attribution="At %d, %n wrote:"
+set attribution="At %[%k:%M on %e %b %Y], %n wrote:"
 
 source ~/.mutt/compose.muttrc
 
