@@ -3,6 +3,10 @@
 set copy              = no   # don't save sent messages: GMail does this
 set move              = no
 
+# show new, flagged, etc., messages
+set mail_check_stats
+set mail_check_stats_interval=5
+
 set date_format="%Y %b %e %k:%M"
 set attribution="At %[%k:%M on %e %b %Y], %n wrote:"
 
