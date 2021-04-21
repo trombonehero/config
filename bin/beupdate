@@ -18,7 +18,7 @@ if grep "404 File Not Found" $REPO_LISTING; then exit 1; fi
 REPO_VERSIONS=`grep "$MAJOR_VERSION\." $REPO_LISTING | sed 's#/.*##'`
 LATEST_VERSION=`echo $REPO_VERSIONS | sed 's/.* //'`
 
-BE_NAME=`date +%Y-%0m-%0d`
+BE_NAME="${MAJOR_VERSION}:`date +%Y-%0m-%0d`"
 
 echo "Installing $LATEST_VERSION to boot environment $BE_NAME"
 
