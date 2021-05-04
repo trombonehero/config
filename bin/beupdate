@@ -29,9 +29,9 @@ sudo bectl mount $BE_NAME $MOUNTPOINT
 sudo mount -t nullfs /dev $MOUNTPOINT/dev
 sudo mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 
-sudo pkg -r $MOUNTPOINT update
-sudo pkg -r $MOUNTPOINT install -y -f -g 'FreeBSD-*'
-sudo pkg -r $MOUNTPOINT upgrade -y
+sudo env ABI=${ABI} pkg -r $MOUNTPOINT update
+sudo env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f -g 'FreeBSD-*'
+sudo env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
 
 sudo umount $MOUNTPOINT/var/cache
 sudo umount $MOUNTPOINT/dev
