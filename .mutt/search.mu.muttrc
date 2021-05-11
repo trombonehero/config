@@ -1,0 +1,3 @@
+# vim: ft=muttrc
+
+set query_command     = "mu cfind --format=mutt-ab '%s'"

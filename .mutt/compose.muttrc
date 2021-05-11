@@ -7,9 +7,6 @@ bind editor <space> noop
 
 set text_flowed
 
-set query_command     = "lbdbq '%s'"
-set query_format      = "%4c %t %-40.40a %-30.30n  %>\   %?e?(%e)?"
-
 # Header Options -------------------------------------
 ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these

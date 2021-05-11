@@ -1,0 +1,4 @@
+# vim: ft=muttrc
+
+set query_command     = "lbdbq '%s'"
+set query_format      = "%4c %t %-40.40a %-30.30n  %>\   %?e?(%e)?"
