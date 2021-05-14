@@ -31,3 +31,5 @@ elif [ -e "$HOME/.local/zprofile" ]; then
 elif [ -e "$HOME/.local/profile" ]; then
 	source $HOME/.local/profile
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
