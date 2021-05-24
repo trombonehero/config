@@ -1,0 +1,12 @@
+#!/bin/sh
+
+delay=$1
+shift
+
+echo "Repeating '$*' with ${delay}s delay"
+
+while true
+do
+	`$*`
+	sleep ${delay}
+done
