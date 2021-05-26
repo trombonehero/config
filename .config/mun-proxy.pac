@@ -2,19 +2,19 @@
 
 function FindProxyForURL(url, host)
 {
-  if (shExpMatch(url, "*.aits.mun.ca/*"))
+  if (dnsDomainIs(host, ".aits.mun.ca"))
   {
     return "SOCKS localhost:1080";
   }
-  else if (shExpMatch(url, "*.ban.mun.ca/*"))
+  else if (dnsDomainIs(host, ".ban.mun.ca"))
   {
     return "SOCKS localhost:1080";
   }
-  else if (shExpMatch(url, "*.fas.mun.ca/*"))
+  else if (dnsDomainIs(host, ".fas.mun.ca"))
   {
     return "SOCKS localhost:1080";
   }
-  else if (shExpMatch(url, "*.wds.mun.ca/*"))
+  else if (dnsDomainIs(host, ".wds.mun.ca"))
   {
     return "SOCKS localhost:1080";
   }
