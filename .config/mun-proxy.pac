@@ -1,4 +1,4 @@
-// vim: set syntax=javascript:
+// vim: filetype=javascript
 
 function FindProxyForURL(url, host)
 {
