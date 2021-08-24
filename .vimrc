@@ -176,8 +176,6 @@ nmap <C-\>i :cs find i <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-autocmd BufRead *.yy let g:yacc_uses_cpp=1 | set syntax=yacc
-
 " Finally, local options to override these defaults...
 if filereadable($HOME . '/.local/vimrc')
 	source $HOME/.local/vimrc
