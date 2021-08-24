@@ -7,9 +7,6 @@ if &textwidth == 0 | set textwidth=80 | endif
 " Show the last command
 set showcmd
 
-" Allow backspace.
-set backspace=start,indent,eol
-
 " Disable cursor blinking.
 set guicursor+=n-v-c:blinkon0
 
@@ -35,7 +32,6 @@ set termencoding=utf-8
 scriptencoding utf-8
 
 " searching options
-set incsearch
 set hlsearch
 
 " line numbers
@@ -151,9 +147,6 @@ set smarttab
 " Expand tabs to spaces in C++ files only.
 set noexpandtab
 "autocmd FileType cpp set expandtab
-
-"set cindent
-set formatoptions=croqlt
 
 " printing
 set printoptions=number:y
