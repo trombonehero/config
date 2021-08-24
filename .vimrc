@@ -103,12 +103,6 @@ set autoread
 " use syntax highlighting
 syntax on
 
-" Enable syntax highlighting for some special file types.
-augroup filetype
-  au! BufRead,BufNewFile *.avdl   set filetype=avro-idl
-  au! BufRead,BufNewFile *.ll     set filetype=llvm
-augroup END
-
 set tabstop=8
 set shiftwidth=8
 
@@ -170,9 +164,6 @@ set t_ti= t_te=
 " enable Doxygen comments in C(++)
 au! Syntax {c,cpp}
 au Syntax {c,cpp} runtime syntax/doxygen.vim
-
-" LLVM colouring
-au! BufNewFile,BufRead *.ll set syntax=llvm
 
 " cscope options
 set cscopetag
