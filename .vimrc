@@ -106,9 +106,6 @@ syntax on
 set tabstop=8
 set shiftwidth=8
 
-" If we use NERDTree, let it open on the right.
-let g:NERDTreeWinPos = "right"
-
 if executable('ag')
   " Note we extract the column as well as the file and line number
   set grepprg=ag\ --nogroup\ --nocolor\ --column
