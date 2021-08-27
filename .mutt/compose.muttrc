@@ -7,6 +7,10 @@ bind editor <space> noop
 
 set text_flowed
 
+# Save myself from missing attachments
+set abort_noattach = ask-yes
+set abort_noattach_regex = "attach(ed|ments?)?"
+
 # Header Options -------------------------------------
 ignore *                                # ignore all headers
 unignore from: to: cc: date: subject:   # show only these
