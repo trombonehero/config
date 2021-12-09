@@ -2,7 +2,7 @@
 
 set realname          = "Jonathan Anderson"
 
-set editor            = "vim +':set textwidth=0'"
+set editor            = "vim -S ~/.mutt/compose.vimrc"
 bind editor <space> noop
 
 set text_flowed
