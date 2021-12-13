@@ -23,17 +23,17 @@ BE_NAME="${MAJOR_VERSION}:`date +%Y-%0m-%0d`"
 echo "Installing $LATEST_VERSION to boot environment $BE_NAME"
 
 MOUNTPOINT=/mnt/$LATEST_VERSION
-sudo mkdir -p $MOUNTPOINT
-sudo bectl create $BE_NAME
-sudo bectl mount $BE_NAME $MOUNTPOINT
-sudo mount -t nullfs /dev $MOUNTPOINT/dev
-sudo mount -t nullfs /var/cache $MOUNTPOINT/var/cache
+mkdir -p $MOUNTPOINT
+bectl create $BE_NAME
+bectl mount $BE_NAME $MOUNTPOINT
+mount -t nullfs /dev $MOUNTPOINT/dev
+mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 
-sudo env ABI=${ABI} pkg -r $MOUNTPOINT update
-sudo env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f -g 'FreeBSD-*'
-sudo env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
+env ABI=${ABI} pkg -r $MOUNTPOINT update
+env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f -g 'FreeBSD-*'
+env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
 
-sudo umount $MOUNTPOINT/var/cache
-sudo umount $MOUNTPOINT/dev
-sudo umount $MOUNTPOINT
-sudo rmdir $MOUNTPOINT
+umount $MOUNTPOINT/var/cache
+umount $MOUNTPOINT/dev
+umount $MOUNTPOINT
+rmdir $MOUNTPOINT
