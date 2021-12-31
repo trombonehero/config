@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+if not set -q argv[1]
+	echo "Usage:  cred <field (username|password)> <name>"
+	exit 1
+end
+
+set getpass "op --cache get item --fields $argv 2>&1"
+set result (eval $getpass)
+set exit_code $status
+
+if string match "*not currently signed in*" "$result" > /dev/null
+	op-signin
+	eval $getpass
+else
+	echo $result
+	exit $exit_code
+end
