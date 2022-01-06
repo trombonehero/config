@@ -8,3 +8,6 @@ set sidebar_visible   = yes
 bind index \CK sidebar-prev
 bind index \CJ sidebar-next
 bind index \CO sidebar-open
+
+# Use comma to move to the next mailbox with unread messages
+macro index,pager , '<sidebar-next-new><sidebar-open><enter>'
