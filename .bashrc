@@ -61,5 +61,8 @@ if [ -e "${HOME}/.local/profile" ]; then
 fi
 
 
+# Add local cargo instance to PATH
+. "$HOME/.cargo/env"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
