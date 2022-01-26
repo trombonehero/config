@@ -8,14 +8,14 @@ end
 set getpass "op --cache get item --fields $argv 2>&1"
 
 # Copy universal OP session identifier to a local environment variable
-set -x OP_SESSION_my $OP_SESSION_my
+set -lx OP_SESSION_my $OP_SESSION_my
 set result (eval $getpass)
 set exit_code $status
 
 if string match "*not currently signed in*" "$result" > /dev/null
 	# Try signing in again, copy OP session to local environment variable
 	op-signin
-	set -x OP_SESSION_my $OP_SESSION_my
+	set -lx OP_SESSION_my $OP_SESSION_my
 	eval $getpass
 else
 	echo $result
