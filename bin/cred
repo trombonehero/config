@@ -14,7 +14,7 @@ set -lx OP_SESSION_my $OP_SESSION_my
 set result (eval $getpass)
 set exit_code $status
 
-if string match "*not currently signed in*" "$result" > /dev/null
+if string match "*not currently signed in*" "$result" > /dev/null; or string match "*session expired*" "$result" > /dev/null
 	# Try signing in again, copy OP session to local environment variable
 	op-signin
 	set -lx OP_SESSION_my $OP_SESSION_my
