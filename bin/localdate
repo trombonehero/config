@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import sys
+
+import email.utils
+
+in_headers = True
+
+for line in sys.stdin.readlines():
+    if in_headers and line == "\n":
+        in_headers = False
+
+    if not in_headers or not line.startswith('Date: '):
+        print(line, end="")
+        continue
+
+    assert line.startswith('Date: ')
+    date = email.utils.parsedate_to_datetime(line[6:])
+
+    formatted = date.astimezone(tz=None).strftime('%a, %e %b %Y @ %k:%M %Z')
+    print('Date:', formatted)

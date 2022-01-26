@@ -12,6 +12,10 @@ set mail_check_stats_interval=5
 set date_format="%Y %b %e %k:%M"
 set attribution="At %[%k:%M on %e %b %Y], %n wrote:"
 
+# Pass displayed messages through the `localdate` binary (~/bin/localdate),
+# which converts all email headers to local date and time.
+set display_filter="localdate"
+
 source ~/.mutt/compose.muttrc
 
 macro index,pager I "<change-folder>=INBOX<Enter>" "Go to INBOX"
