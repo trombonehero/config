@@ -9,6 +9,8 @@ set getpass "op --cache get item --fields $argv 2>&1"
 
 # Copy universal OP session identifier to a local environment variable
 set -lx OP_SESSION_my $OP_SESSION_my
+
+# Try running the command, see if it fails due to not being logged in
 set result (eval $getpass)
 set exit_code $status
 
