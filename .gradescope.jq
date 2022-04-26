@@ -2,7 +2,7 @@
   | sort_by(.number)[]
   | "📝 \(.number) \(.name)\n"
     + "💯 Score: \(.score)/\(.max_score)\n️"
-    + "🖨️Output:\n" + "\u001b[34m" + "\(.output)") + "\u001b[0m"
+    + "🖨️Output:\n" + "\u001b[34m" + "\(.output)") + "\u001b[0m\n"
 
 + "==========================================================================\n"
 + "💯 Score: \(.score)/\(.max_score)\n"
