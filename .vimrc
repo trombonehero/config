@@ -183,6 +183,5 @@ endif
 
 let g:airline_powerline_fonts = 1
 
-" A nice, warm, dark colour scheme:
-set background=dark
+" A nice, warm colour scheme:
 colorscheme gruvbox
