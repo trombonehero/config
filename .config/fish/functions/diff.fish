@@ -3,7 +3,11 @@
 #
 function diff
 	set colordiff (which colordiff)
-	if [ -x "$colordiff" ]
+	set difft (which difft)
+
+	if [ -x "$difft" ]
+		eval $difft --display inline $argv
+	else if [ -x "$colordiff" ]
 		eval $colordiff -u $argv
 	else
 		eval (which diff) -u $argv
