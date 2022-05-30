@@ -71,6 +71,13 @@ set statusline+=%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}           " file format
 set statusline+=]
 
+" Ensure that colours work within screen
+if exists('+termguicolors') && ($TERM == "screen-256color" || $TERM == "tmux-256color")
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
 " Highlight characters over the textwidth.
 let &colorcolumn="+1,+2"
 highlight ColorColumn ctermfg=DarkRed
@@ -155,6 +162,9 @@ let g:clang_complete_copen = 1    " show Clang errors in quickfix
 let g:clang_user_options='|| exit 0'
 let g:clang_close_preview=1
 
+" don't overwrite the background colour of the terminal
+set t_ut=
+
 " don't clear the xterm on exit
 set t_ti= t_te=
 
@@ -175,6 +185,10 @@ nmap <C-\>f :cs find f <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>i :cs find i <C-R>=expand("<cword>")<CR><CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
+" macOS dark mode
+if !has('mac')
+    let g:auto_color_switcher#desable = v:true
+endif
 
 " Finally, local options to override these defaults...
 if filereadable($HOME . '/.local/vimrc')
