@@ -16,6 +16,9 @@ set attribution="At %[%k:%M on %e %b %Y], %n wrote:"
 # which converts all email headers to local date and time.
 set display_filter="localdate"
 
+# Don't show plus signs at the beginning of line wraps, as this breaks URLs
+unset markers
+
 source ~/.mutt/compose.muttrc
 
 macro index,pager I "<change-folder>=INBOX<Enter>" "Go to INBOX"
