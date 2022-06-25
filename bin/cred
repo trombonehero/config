@@ -5,21 +5,34 @@ if not set -q argv[1]
 	exit 1
 end
 
-set getpass "op --cache get item --fields $argv 2>&1"
+set getpass "op --cache item get --fields $argv 2>&1"
+
+function set_session_token
+	set token (env \
+		| awk -F= '/^OP_SESSION_/ { print $1 " " $2 }' \
+		| string split " ")
+
+	set $argv[1] -x $token[1] $token[2]
+end
 
 # Copy universal OP session identifier to a local environment variable
-set -lx OP_SESSION_my $OP_SESSION_my
+set_session_token -l
 
 # Try running the command, see if it fails due to not being logged in
 set result (eval $getpass)
-set exit_code $status
 
 if string match "*not currently signed in*" "$result" > /dev/null; or string match "*session expired*" "$result" > /dev/null
 	# Try signing in again, copy OP session to local environment variable
-	op-signin
-	set -lx OP_SESSION_my $OP_SESSION_my
-	eval $getpass
-else
-	echo $result
-	exit $exit_code
+	eval (op signin)
+	set exit_code $status
+
+	if test $exit_code != 0
+		exit $exit_code
+	end
 end
+
+# Copy OP session identifier to a universal environment variable
+set_session_token -U
+
+eval $getpass
+exit $status
