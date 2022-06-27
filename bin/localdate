@@ -6,7 +6,9 @@ import email.utils
 
 in_headers = True
 
-for line in sys.stdin.readlines():
+f = open(0, 'r', errors='replace')
+
+for line in f.readlines():
     if in_headers and line == "\n":
         in_headers = False
 
