@@ -1,0 +1,30 @@
+# Gruvbox colours that appear in both light and dark variants:
+#
+# red: 124
+# green: 106
+# yellow: 172
+# blue: 66
+# purple: 132
+# aqua: 72
+# orange: 166
+
+# Index:
+color index_date color66 default
+color sidebar_flagged color166 default
+color sidebar_unread color132 default
+
+color index		color172 default ~F		# Flagged
+color index		color106 default ~N		# New
+color index		color98  default ~U		# Unread
+color index		color124 default ~D		# Deleted
+color index		color243 default ~Q		# Replied-to
+
+# Headers:
+color header		color166 default	"^(To:|From:)"
+color header		color132 default	"^Subject:"
+color header		color66  default	"^Date:"
+color header		color124 default	"^X-Spam-Status:"
+color header		color72  default	"^Received:"
+color compose header	color132 default
+
+color body		color66  default	"^ *>+.*"

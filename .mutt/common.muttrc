@@ -32,8 +32,7 @@ alternative_order text/html text/enriched text/plain
 source ~/.mutt/index.muttrc
 source ~/.mutt/sidebar.muttrc
 
-source ~/.mutt/gruvbox/colors-gruvbox-shuber.muttrc
-source ~/.mutt/gruvbox/colors-gruvbox-shuber-extended.muttrc
+source gruvbox-neutral.muttrc
 
 # Make the status bar a bit more interesting (dark brown, not grey)
 color status color234 color94
