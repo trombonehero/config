@@ -16,8 +16,8 @@ color sidebar_unread color132 default
 color index		color172 default ~F		# Flagged
 color index		color106 default ~N		# New
 color index		color98  default ~U		# Unread
-color index		color124 default ~D		# Deleted
 color index		color243 default ~Q		# Replied-to
+color index		color124 default ~D		# Deleted
 
 # Headers:
 color header		color166 default	"^(To:|From:)"
