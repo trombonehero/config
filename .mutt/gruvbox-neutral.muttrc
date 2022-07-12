@@ -8,6 +8,8 @@
 # aqua: 72
 # orange: 166
 
+color indicator color72 default
+
 # Index:
 color index_date color66 default
 color sidebar_flagged color166 default
