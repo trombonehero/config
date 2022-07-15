@@ -12,11 +12,11 @@ function set_session_token
 		| awk -F= '/^OP_SESSION_/ { print $1 " " $2 }' \
 		| string split " ")
 
-	set $argv[1] -x $token[1] $token[2]
+	set $argv[1] $token[1] $token[2]
 end
 
-# Copy universal OP session identifier to a local environment variable
-set_session_token -l
+# Unset possibly-stale token if it exists
+set_session_token -u
 
 # Try running the command, see if it fails due to not being logged in
 set result (eval $getpass)
@@ -32,7 +32,7 @@ if string match "*not currently signed in*" "$result" > /dev/null; or string mat
 end
 
 # Copy OP session identifier to a universal environment variable
-set_session_token -U
+set_session_token -Ux
 
 eval $getpass
 exit $status
