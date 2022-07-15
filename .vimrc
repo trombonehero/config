@@ -1,7 +1,7 @@
 " Pathogen: Vim plugin manager
 execute pathogen#infect()
 
-# Reload on SIGUSR1
+" Reload on SIGUSR1
 autocmd SigUSR1 * call reload#ReloadConfig()
 
 " Default to 80-column lines.
