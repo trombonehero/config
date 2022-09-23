@@ -5,6 +5,10 @@ if not set -q argv[1]
 	exit 1
 end
 
+if string match "Darwin" (uname) > /dev/null
+	exec op item get --fields $argv
+end
+
 set getpass "op --cache item get --fields $argv 2>&1"
 
 function set_session_token
