@@ -1,4 +1,0 @@
-#!/bin/sh
-
-security find-generic-password -l 1password -w \
-      | op signin $* \
