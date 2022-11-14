@@ -31,7 +31,7 @@ mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 
 env ABI=${ABI} pkg -r $MOUNTPOINT update
 
-BASE_PACKAGES=`pkg -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-/{ print $1 }'`
+BASE_PACKAGES=`pkg -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-|-liby/{ print $1 }'`
 env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f $BASE_PACKAGES
 env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
 
