@@ -1,0 +1,8 @@
+[aws]
+disabled = true
+
+[c]
+disabled = true
+
+[git_status]
+ignore_submodules = true
