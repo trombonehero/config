@@ -4,5 +4,8 @@ disabled = true
 [c]
 disabled = true
 
+[docker_context]
+disabled = true
+
 [git_status]
 ignore_submodules = true
