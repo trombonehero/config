@@ -43,8 +43,8 @@ set number
 set termguicolors
 
 " Use transparency when we can
-let g:neovide_transparency=0.8
-let g:transparency=0.8
+let g:neovide_transparency=0.9
+let g:transparency=0.9
 
 if exists("g:neovide")
 	autocmd VimEnter * TransparentDisable
