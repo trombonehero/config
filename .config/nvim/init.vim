@@ -45,6 +45,9 @@ set clipboard+=unnamedplus
 " Use line numbers
 set number
 
+" Show textwidth
+set colorcolumn=+1,+2
+
 " Use 24b colour in the terminal where possible
 set termguicolors
 
