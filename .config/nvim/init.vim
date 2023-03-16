@@ -15,11 +15,17 @@ Plug 'lewis6991/gitsigns.nvim'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Syntax highlighting for the Fish shell
+Plug 'nickeb96/fish.vim'
+
 " Fast Lua-based status line
 Plug 'nvim-lualine/lualine.nvim'
 
 " Icons used by trouble.nvim
 Plug 'nvim-tree/nvim-web-devicons'
+
+" Handle Git conflict markers
+Plug 'rhysd/conflict-marker.vim'
 
 " Support for all things Rust
 Plug 'rust-lang/rust.vim'
