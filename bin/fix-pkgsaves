@@ -1,0 +1,24 @@
+#!/usr/bin/env fish
+
+#
+# First just remove all backups that match the current version.
+#
+for pkgsave_version in (find $argv -name '*.pkgsave')
+	set canonical (string replace '.pkgsave' '' $pkgsave_version )
+
+	if command diff --brief $canonical $pkgsave_version > /dev/null
+		rm $pkgsave_version
+	end
+end
+
+#
+# Now let's fix what remains.
+#
+for pkgsave_version in (find $argv -name '*.pkgsave')
+	set canonical (string replace '.pkgsave' '' $pkgsave_version )
+
+	command diff --brief $canonical $pkgsave_version > /dev/null
+	if [ $status -gt 0 ]
+		vimdiff $canonical $pkgsave_version
+	end
+end
