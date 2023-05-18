@@ -6,6 +6,9 @@ Plug 'ellisonleao/gruvbox.nvim'
 " Pretty presentation of diagnostics
 Plug 'folke/trouble.nvim'
 
+" DBML: a nice database modeling language
+Plug 'jidn/vim-dbml'
+
 " Icons for the status line
 Plug 'kyazdani42/nvim-web-devicons'
 
