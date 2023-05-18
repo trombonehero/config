@@ -34,6 +34,9 @@ Plug 'nvim-lualine/lualine.nvim'
 " Fast fuzzy finder
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 
+" Tree view plugin
+Plug 'nvim-tree/nvim-tree.lua'
+
 " Icons used by trouble.nvim
 Plug 'nvim-tree/nvim-web-devicons'
 
@@ -83,6 +86,9 @@ colorscheme gruvbox
 
 " Set up Git status symbols
 lua require('gitsigns').setup()
+
+" Set up tree view
+lua require("nvim-tree").setup()
 
 " Enable trouble.vim
 lua require("trouble").setup()
