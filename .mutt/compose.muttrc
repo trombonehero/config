@@ -2,7 +2,7 @@
 
 set realname          = "Jonathan Anderson"
 
-set editor            = "vim -S ~/.mutt/compose.vimrc"
+set editor            = "nvim -S ~/.mutt/compose.vimrc"
 bind editor <space> noop
 
 set forward_format    = "Fwd: %s"
