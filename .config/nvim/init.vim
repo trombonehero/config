@@ -9,6 +9,10 @@ Plug 'folke/trouble.nvim'
 " DBML: a nice database modeling language
 Plug 'jidn/vim-dbml'
 
+" Fzf plugin (includes Ag and Rg)
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Icons for the status line
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -21,8 +25,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Syntax highlighting for the Fish shell
 Plug 'nickeb96/fish.vim'
 
+" Required by Telescope
+Plug 'nvim-lua/plenary.nvim'
+
 " Fast Lua-based status line
 Plug 'nvim-lualine/lualine.nvim'
+
+" Fast fuzzy finder
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 
 " Icons used by trouble.nvim
 Plug 'nvim-tree/nvim-web-devicons'
@@ -47,6 +57,12 @@ set clipboard+=unnamedplus
 
 " Use line numbers
 set number
+
+" Telescope key bindings
+nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>g <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Show textwidth
 set colorcolumn=+1,+2
