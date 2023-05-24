@@ -65,6 +65,9 @@ Plug 'tpope/vim-fugitive'
 " Remove background colours in transparent terminals
 Plug 'tribela/vim-transparent'
 
+" dhcpd.conf 
+Plug 'vim-scripts/dhcpd.vim'
+
 call plug#end()
 
 " Run PlugInstall if there are missing plugins
