@@ -43,6 +43,9 @@ Plug 'nvim-tree/nvim-web-devicons'
 " Handle Git conflict markers
 Plug 'rhysd/conflict-marker.vim'
 
+" LLVM IR syntax
+Plug 'rhysd/vim-llvm'
+
 " Support for all things Rust
 Plug 'rust-lang/rust.vim'
 
