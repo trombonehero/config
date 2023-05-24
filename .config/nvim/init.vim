@@ -85,6 +85,7 @@ let g:transparency=0.9
 
 if exists("g:neovide")
 	autocmd VimEnter * TransparentDisable
+	autocmd VimEnter * set guifont=Hack:h12.5
 end
 
 " A nice, warm colour scheme
