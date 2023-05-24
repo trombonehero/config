@@ -70,6 +70,9 @@ nnoremap <leader>g <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Tree view binding
+nnoremap <leader>t <cmd>NvimTreeToggle<cr>
+
 " Show textwidth
 set colorcolumn=+1,+2
 
