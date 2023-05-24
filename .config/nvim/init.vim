@@ -67,6 +67,10 @@ Plug 'tribela/vim-transparent'
 
 call plug#end()
 
+" Run PlugInstall if there are missing plugins
+if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+	PlugInstall --sync
+endif
 
 " Use default system clipboard where possible
 set clipboard+=unnamedplus
