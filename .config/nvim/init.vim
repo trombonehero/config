@@ -1,3 +1,13 @@
+" Install vim-plug if not found
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	echo "plug.vim not found, downloading... "
+  	silent !curl --silent --show-error --fail --location 
+		\ --create-dirs
+		\ --output ~/.config/nvim/autoload/plug.vim
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	echo "plug.vim installed"
+endif
+
 call plug#begin()
 
 " Gruvbox colour scheme
