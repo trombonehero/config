@@ -1,0 +1,14 @@
+session_name: voltron
+windows:
+- focus: 'true'
+  layout: 6c67,228x67,0,0{56x67,0,0[56x19,0,0,82,56x47,0,20,79],90x67,57,0[90x53,57,0,80,90x13,57,54,85],80x67,148,0[80x26,148,0,81,80x40,148,27,83]}
+  options: {}
+  panes:
+  - voltron view command "frame variable"
+  - voltron view disasm
+  - focus: 'true'
+    shell_command: echo "Run LLDB here"
+  - voltron view backtrace
+  - voltron view registers
+  - voltron view stack
+  window_name: lldb
