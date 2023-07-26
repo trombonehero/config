@@ -1,0 +1,36 @@
+#!/usr/bin/env fish
+
+if [ "$argv[1]" != "" ]
+    set time_of_day $argv[1]
+else if [ "$DARKMODE" = "1" ]
+    set time_of_day "night"
+else if [ "$DARKMODE" = "0" ]
+    set time_of_day "day"
+else if command which osascript > /dev/null
+    if [ (osascript -e 'tell app "System Events" to tell appearance preferences to get dark mode') = "true" ]
+        set time_of_day "night"
+    else
+        set time_of_day "day"
+    end
+else
+    set time_of_day (sunshine --simple "!@47.5314 -53.2059")
+end
+
+if [ "$time_of_day" = "night" ]
+    set upper Dark
+    set lower dark
+else
+    set upper Light
+    set lower light
+end
+
+sed -i '' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/bat/config
+#sed -i '' "s/\"Gruvbox .*\"/\"Gruvbox $upper\"/" ~/.config/wezterm/wezterm.lua
+sed -i '' "s/^set background=.*/set background=$lower/" ~/.local/vimrc
+
+for neovim_socket in (ls /var/folders/**/nvim.jon/**/nvim.*)
+  nvr --servername $neovim_socket --remote-send "<esc>:set background=$lower<cr>"
+end
+
+tmux set -g @tmux-gruvbox $lower
+tmux source-file ~/.tmux.conf
