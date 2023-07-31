@@ -36,3 +36,5 @@
 	defaultBranch = main
 [gpg]
 	program = gpg2
+[status]
+	submoduleSummary = true
