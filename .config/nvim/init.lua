@@ -25,3 +25,19 @@ vim.keymap.set('n', '<leader>o', telescope_builtins.find_files, {})
 vim.keymap.set('n', '<leader>g', telescope_builtins.live_grep, {})
 vim.keymap.set('n', '<leader>b', telescope_builtins.buffers, {})
 vim.keymap.set('n', '<leader>h', telescope_builtins.help_tags, {})
+
+-- Enable trouble.vim
+require("trouble").setup()
+
+-- Allow moving Telescope queries to the Trouble window
+local actions = require("telescope.actions")
+local trouble_t = require("trouble.providers.telescope")
+
+require('telescope').setup {
+  defaults = {
+    mappings = {
+      i = { ["<c-t>"] = trouble_t.open_with_trouble },
+      n = { ["<c-t>"] = trouble_t.open_with_trouble },
+    },
+  },
+}
