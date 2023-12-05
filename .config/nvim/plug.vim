@@ -69,6 +69,9 @@ Plug 'nvim-tree/nvim-web-devicons'
 " TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" Man pages
+Plug 'paretje/nvim-man'
+
 " Handle Git conflict markers
 Plug 'rhysd/conflict-marker.vim'
 
