@@ -23,17 +23,33 @@ Plug 'jidn/vim-dbml'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+" Typst language syntax
+Plug 'kaarmu/typst.vim'
+
 " Icons for the status line
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Visualize Git status
 Plug 'lewis6991/gitsigns.nvim'
 
+" Jinja2 syntax
+Plug 'lepture/vim-jinja'
+
+" Mason
+Plug 'williamboman/mason.nvim' 
+Plug 'williamboman/mason-lspconfig.nvim' 
+
+" Show Typst emoji, etc.
+Plug 'MrPicklePinosaur/typst-conceal.vim', {'for': 'typst'}
+
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntax highlighting for the Fish shell
 Plug 'nickeb96/fish.vim'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
 
 " Required by Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -42,13 +58,16 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
 " Fast fuzzy finder
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 
 " Tree view plugin
 Plug 'nvim-tree/nvim-tree.lua'
 
 " Icons used by trouble.nvim
 Plug 'nvim-tree/nvim-web-devicons'
+
+" TreeSitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Handle Git conflict markers
 Plug 'rhysd/conflict-marker.vim'
@@ -59,6 +78,9 @@ Plug 'rhysd/vim-llvm'
 " Support for all things Rust
 Plug 'rust-lang/rust.vim'
 
+" Other Rust tools
+Plug 'simrat39/rust-tools.nvim'
+
 " Git support
 Plug 'tpope/vim-fugitive'
 
@@ -68,57 +90,15 @@ Plug 'tribela/vim-transparent'
 " dhcpd.conf 
 Plug 'vim-scripts/dhcpd.vim'
 
+function! UpdateRemotePlugins(...)
+  " Needed to refresh runtime files
+  let &rtp=&rtp
+  UpdateRemotePlugins
+endfunction
+
 call plug#end()
 
 " Run PlugInstall if there are missing plugins
 if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 	PlugInstall --sync
 endif
-
-" Use default system clipboard where possible
-set clipboard+=unnamedplus
-
-" Use line numbers
-set number
-
-" Telescope key bindings
-nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>g <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
-
-" Tree view binding
-nnoremap <leader>t <cmd>NvimTreeToggle<cr>
-
-" Show textwidth
-set colorcolumn=+1,+2
-
-" Use 24b colour in the terminal where possible
-set termguicolors
-
-" Use transparency when we can
-let g:neovide_transparency=0.9
-let g:transparency=0.9
-
-if exists("g:neovide")
-	autocmd VimEnter * TransparentDisable
-	autocmd VimEnter * set guifont=Hack:h12.5
-end
-
-" A nice, warm colour scheme
-colorscheme gruvbox
-
-" Set up Git status symbols
-lua require('gitsigns').setup()
-
-" Set up tree view
-lua require("nvim-tree").setup()
-
-" Enable trouble.vim
-lua require("trouble").setup()
-
-" Set up status line
-autocmd VimEnter * lua require("lualine").setup()
-
-" Finally, local options to override these defaults...
-source $HOME/.local/vimrc
