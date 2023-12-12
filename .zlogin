@@ -16,7 +16,7 @@ if [ -d "$HOME/bin" ]; then
 fi
 
 # Use local Rust configuration, if one exists
-if [ -e "$HOME/.cargo/env" ] ; then
+if [ -d "$HOME/.cargo" ] && [ -e "$HOME/.cargo/env" ] ; then
 	source $HOME/.cargo/env
 fi
 
