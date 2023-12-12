@@ -33,7 +33,9 @@ if [ -e "${HOME}/bin" ]; then
 	export PATH=${HOME}/bin:$PATH
 fi
 
-. "$HOME/.cargo/env"
+if [ -e "${HOME}/.cargo/env" ]; then
+	. "$HOME/.cargo/env"
+fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
