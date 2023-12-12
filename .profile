@@ -33,7 +33,8 @@ if [ -e "${HOME}/bin" ]; then
 	export PATH=${HOME}/bin:$PATH
 fi
 
-if [ -e "${HOME}/.cargo/env" ]; then
+# Set up Cargo if we have it
+if [ -d "${HOME}/.cargo" ] && [ -e "${HOME}/.cargo/env" ]; then
 	. "$HOME/.cargo/env"
 fi
 
