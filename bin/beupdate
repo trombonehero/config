@@ -16,7 +16,7 @@ trap cleanup EXIT
 
 echo "Updating from $REPO"
 
-: ${ABI:="`pkg config abi`"}
+: ${ABI:="`pkg-static config abi`"}
 echo "ABI: ${ABI}"
 
 MAJOR_VERSION=`echo $ABI | awk -F: '{ print $2 }'`
@@ -39,11 +39,11 @@ bectl mount $BE_NAME $MOUNTPOINT
 mount -t nullfs /dev $MOUNTPOINT/dev
 mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 
-env ABI=${ABI} pkg -r $MOUNTPOINT update
+env ABI=${ABI} pkg-static -r $MOUNTPOINT update
 
-BASE_PACKAGES=`pkg -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-|-liby/{ print $1 }'`
-env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f $BASE_PACKAGES
-env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
+BASE_PACKAGES=`pkg-static -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-|-liby/{ print $1 }'`
+env ABI=${ABI} pkg-static -r $MOUNTPOINT install -y -f $BASE_PACKAGES
+env ABI=${ABI} pkg-static -r $MOUNTPOINT upgrade -y
 
 # Activate the new BE for the next boot only
 bectl activate -t $BE_NAME
