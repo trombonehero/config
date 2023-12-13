@@ -26,6 +26,10 @@ vim.keymap.set('n', '<leader>g', telescope_builtins.live_grep, {})
 vim.keymap.set('n', '<leader>b', telescope_builtins.buffers, {})
 vim.keymap.set('n', '<leader>h', telescope_builtins.help_tags, {})
 
+-- Enable Telescope + CoC
+require('telescope').load_extension('coc')
+vim.keymap.set('n', '<leader>c', '<cmd>Telescope coc workspace_symbols<cr>', {})
+
 -- Enable trouble.vim
 require("trouble").setup()
 

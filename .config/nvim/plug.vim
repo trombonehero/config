@@ -13,6 +13,9 @@ call plug#begin()
 " Gruvbox colour scheme
 Plug 'ellisonleao/gruvbox.nvim'
 
+" CoC for Telescope
+Plug 'fannheyward/telescope-coc.nvim'
+
 " Pretty presentation of diagnostics
 Plug 'folke/trouble.nvim'
 
