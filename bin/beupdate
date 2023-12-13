@@ -4,6 +4,16 @@
 : ${REPO_BASE:="https://allandale.engr.mun.ca/freebsd"}
 : ${REPO:="${REPO_BASE}/${CHANNEL}"}
 
+cleanup() {
+  rmdir $MOUNTPOINT/$MOUNTPOINT
+  umount $MOUNTPOINT/var/cache
+  umount $MOUNTPOINT/dev
+  umount $MOUNTPOINT
+  rmdir $MOUNTPOINT
+}
+
+trap cleanup EXIT
+
 echo "Updating from $REPO"
 
 : ${ABI:="`pkg config abi`"}
@@ -34,12 +44,6 @@ env ABI=${ABI} pkg -r $MOUNTPOINT update
 BASE_PACKAGES=`pkg -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-|-liby/{ print $1 }'`
 env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f $BASE_PACKAGES
 env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
-
-rmdir $MOUNTPOINT/$MOUNTPOINT
-umount $MOUNTPOINT/var/cache
-umount $MOUNTPOINT/dev
-umount $MOUNTPOINT
-rmdir $MOUNTPOINT
 
 # Activate the new BE for the next boot only
 bectl activate -t $BE_NAME
