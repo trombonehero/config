@@ -25,7 +25,9 @@ require("rust-tools").setup()
 
 -- Telescope key bindings
 local telescope_builtins = require('telescope.builtin')
-vim.keymap.set('n', '<leader>f', telescope_builtins.git_files, {})
+vim.keymap.set('n', '<leader>f', function()
+  telescope_builtins.git_files({recurse_submodules = true})
+end)
 vim.keymap.set('n', '<leader>o', telescope_builtins.find_files, {})
 vim.keymap.set('n', '<leader>g', telescope_builtins.live_grep, {})
 vim.keymap.set('n', '<leader>b', telescope_builtins.buffers, {})
@@ -47,6 +49,9 @@ require('telescope').setup {
     mappings = {
       i = { ["<c-t>"] = trouble_t.open_with_trouble },
       n = { ["<c-t>"] = trouble_t.open_with_trouble },
+    },
+    pickers = {
+      git_files = { recurse_submodules = true },
     },
   },
 }
