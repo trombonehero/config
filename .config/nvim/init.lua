@@ -5,6 +5,11 @@ vim.cmd.source(config .. "/plug.vim")
 vim.cmd.source(config .. "/visual.vim")
 vim.cmd.source(config .. "/vimrc.vim")
 
+-- Set up CoC search key binding
+vim.keymap.set('n', '<leader>s', function()
+  vim.cmd('CocSearch ' .. vim.fn.expand('<cword>'))
+end)
+
 -- Set up Git status symbols
 require('gitsigns').setup()
 
