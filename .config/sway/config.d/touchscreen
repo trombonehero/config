@@ -1,5 +1,5 @@
 # vim: syntax=swayconfig
 
-input type:touchscreen {
+input type:touch {
     tap enabled
 }
