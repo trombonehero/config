@@ -1,5 +1,3 @@
-alt_send_esc: true
-
 bell:
   animation: EaseOutExpo
   duration: 0
