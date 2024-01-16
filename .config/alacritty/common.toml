@@ -22,12 +22,6 @@ hide_when_typing = true
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
-
 [scrolling]
 history = 10000
 multiplier = 3
