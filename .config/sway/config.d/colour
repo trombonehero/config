@@ -1,0 +1,37 @@
+# vim: syntax=swayconfig
+
+include ../base16/base16-gruvbox-dark-pale.config
+
+set $bg         $base00
+set $text       $base07
+set $danger     $base08
+set $urgent     $base09
+set $urgent2    $base0A
+set $orange     $base0F
+set $accent     $base0B
+set $calm       $base0C
+set $calmer     $base0D
+set $rose       $base0E
+
+set $grey1      $base01
+set $grey2      $base02
+set $grey3      $base03
+set $grey4      $base04
+
+set $pale       $base05
+set $paler      $base06
+set $palest     $base07
+
+client.focused      $grey2  $calmer $base00 $bg     $bg
+client.unfocused    $grey2  $grey1  $text   $bg     $bg
+client.urgent       $grey2  $urgent $bg     $bg     $bg
+
+bar {
+    colors {
+        background $bg
+        statusline $text
+        focused_workspace $grey1 $rose $bg
+        active_workspace $grey1 $urgent $text
+        inactive_workspace $bg $grey1 $text
+    }
+}
