@@ -1,0 +1,8 @@
+# vim: syntax=swayconfig
+
+bindsym ctrl+$mod+l exec swaylock
+
+exec swayidle -w \
+    timeout 300 'swaylock -f' \
+    \
+    before-sleep 'swaylock -f'
