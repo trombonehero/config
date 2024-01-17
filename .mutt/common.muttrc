@@ -28,7 +28,7 @@ source ~/.mutt/index.muttrc
 
 # Prefer plain text to HTML, but allow HTML translation via ~/.mailcap
 alternative_order text/calendar text/plain text/html text/enriched
-auto_view text/calendar text/html application/ics
+auto_view text/calendar text/html text/enriched text/plain application/ics
 
 source ~/.mutt/index.muttrc
 source ~/.mutt/sidebar.muttrc
