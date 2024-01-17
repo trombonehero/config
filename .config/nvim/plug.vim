@@ -38,6 +38,9 @@ Plug 'lewis6991/gitsigns.nvim'
 " Jinja2 syntax
 Plug 'lepture/vim-jinja'
 
+" Colours
+Plug 'norcalli/nvim-colorizer.lua'
+
 " Mason
 Plug 'williamboman/mason.nvim' 
 Plug 'williamboman/mason-lspconfig.nvim' 

@@ -5,6 +5,9 @@ vim.cmd.source(config .. "/plug.vim")
 vim.cmd.source(config .. "/visual.vim")
 vim.cmd.source(config .. "/vimrc.vim")
 
+-- Set up RGB colourization
+require('colorizer').setup()
+
 -- Set up CoC search key binding
 vim.keymap.set('n', '<leader>s', function()
   vim.cmd('CocSearch ' .. vim.fn.expand('<cword>'))
