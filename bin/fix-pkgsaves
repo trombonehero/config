@@ -19,6 +19,6 @@ for pkgsave_version in (find $argv -name '*.pkgsave')
 
 	command diff --brief $canonical $pkgsave_version > /dev/null
 	if [ $status -gt 0 ]
-		vimdiff $canonical $pkgsave_version
+		nvim -d $canonical $pkgsave_version
 	end
 end
