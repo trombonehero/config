@@ -41,6 +41,9 @@ Plug 'lepture/vim-jinja'
 " Colours
 Plug 'norcalli/nvim-colorizer.lua'
 
+" VimTeX
+"Plug 'lervag/vimtex'
+
 " Mason
 Plug 'williamboman/mason.nvim' 
 Plug 'williamboman/mason-lspconfig.nvim' 
