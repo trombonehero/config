@@ -14,6 +14,10 @@ function FindProxyForURL(url, host)
   {
     return "SOCKS localhost:1080";
   }
+  else if (dnsDomainIs(host, ".mts.mun.ca"))
+  {
+    return "SOCKS localhost:1080";
+  }
   else if (dnsDomainIs(host, ".wds.mun.ca"))
   {
     return "SOCKS localhost:1080";
