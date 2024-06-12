@@ -44,10 +44,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 " VimTeX
 "Plug 'lervag/vimtex'
 
-" Mason
-Plug 'williamboman/mason.nvim' 
-Plug 'williamboman/mason-lspconfig.nvim' 
-
 " Show Typst emoji, etc.
 Plug 'MrPicklePinosaur/typst-conceal.vim', {'for': 'typst'}
 
