@@ -41,13 +41,13 @@ require("trouble").setup()
 
 -- Allow moving Telescope queries to the Trouble window
 local actions = require("telescope.actions")
-local trouble_t = require("trouble.providers.telescope")
+local trouble_t = require("trouble.sources.telescope")
 
 require('telescope').setup {
   defaults = {
     mappings = {
-      i = { ["<c-t>"] = trouble_t.open_with_trouble },
-      n = { ["<c-t>"] = trouble_t.open_with_trouble },
+      i = { ["<c-t>"] = trouble_t.open },
+      n = { ["<c-t>"] = trouble_t.open },
     },
     pickers = {
       git_files = { recurse_submodules = true },
