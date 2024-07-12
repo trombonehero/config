@@ -16,10 +16,6 @@ end)
 -- Set up Git status symbols
 require('gitsigns').setup()
 
--- Set up Mason (LSP plugin manager)
-require("mason").setup()
-require("mason-lspconfig").setup()
-
 -- Set up tree view
 require("nvim-tree").setup()
 
