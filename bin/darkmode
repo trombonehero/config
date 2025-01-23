@@ -19,9 +19,15 @@ end
 if [ "$time_of_day" = "night" ]
     set upper Dark
     set lower dark
+    set dark true
 else
     set upper Light
     set lower light
+    set dark false
+end
+
+if [ (uname -s) = "Darwin" ]
+    osascript -e (string join ' ' 'tell app "System Events" to tell appearance preferences to set dark mode to' $dark)
 end
 
 if [ -f ~/.config/bat/config ]
