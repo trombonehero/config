@@ -42,8 +42,10 @@ if [ -f ~/.local/vimrc ]
     sed -i '' "s/^set background=.*/set background=$lower/" ~/.local/vimrc
 end
 
-for neovim_socket in (ls /var/folders/**/nvim.jon/**/nvim.*)
-  nvr --servername $neovim_socket --remote-send "<esc>:set background=$lower<cr>"
+if [ -f (which nvr) ]
+    for neovim_socket in (ls /var/folders/**/nvim.jon/**/nvim.*)
+        nvr --servername $neovim_socket --remote-send "<esc>:set background=$lower<cr>"
+    end
 end
 
 tmux set -g @tmux-gruvbox $lower
