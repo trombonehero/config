@@ -26,8 +26,6 @@ else
     set dark false
 end
 
-theme_gruvbox $lower
-
 if [ (uname -s) = "Darwin" ]
     osascript -e (string join ' ' 'tell app "System Events" to tell appearance preferences to set dark mode to' $dark)
 end
