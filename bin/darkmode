@@ -30,6 +30,10 @@ if [ (uname -s) = "Darwin" ]
     osascript -e (string join ' ' 'tell app "System Events" to tell appearance preferences to set dark mode to' $dark)
 end
 
+if [ -f ~/.config/alacritty/alacritty.toml ]
+    sed -i '' "s/base16-gruvbox-[a-z]*-/base16-gruvbox-$lower-/" ~/.config/alacritty/alacritty.toml
+end
+
 if [ -f ~/.config/bat/config ]
     sed -i '' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/bat/config
 end
