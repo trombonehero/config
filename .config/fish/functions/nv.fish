@@ -1,3 +1,3 @@
 function nv
-    neovide --grid 100x80 $argv
+    neovide --grid 100x80 $argv &
 end
