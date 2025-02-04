@@ -8,6 +8,11 @@ vim.cmd.source(config .. "/vimrc.vim")
 -- Set up code completion via LSP
 require('mason').setup()
 require('mason-lspconfig').setup()
+require('mason-lspconfig').setup_handlers {
+  function (server_name) -- default handler
+    require('lspconfig')[server_name].setup {}
+  end,
+}
 
 -- Set up RGB colourization
 require('colorizer').setup()
