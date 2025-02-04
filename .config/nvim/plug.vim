@@ -13,9 +13,6 @@ call plug#begin()
 " Gruvbox colour scheme
 Plug 'ellisonleao/gruvbox.nvim'
 
-" CoC for Telescope
-Plug 'fannheyward/telescope-coc.nvim'
-
 " Pretty presentation of diagnostics
 Plug 'folke/trouble.nvim'
 
@@ -46,9 +43,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " Show Typst emoji, etc.
 Plug 'MrPicklePinosaur/typst-conceal.vim', {'for': 'typst'}
-
-" Code completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Syntax highlighting for the Fish shell
 Plug 'nickeb96/fish.vim'
