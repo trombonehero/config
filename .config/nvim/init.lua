@@ -5,6 +5,10 @@ vim.cmd.source(config .. "/plug.vim")
 vim.cmd.source(config .. "/visual.vim")
 vim.cmd.source(config .. "/vimrc.vim")
 
+-- Set up code completion via LSP
+require('mason').setup()
+require('mason-lspconfig').setup()
+
 -- Set up RGB colourization
 require('colorizer').setup()
 

@@ -23,9 +23,6 @@ Plug 'jidn/vim-dbml'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-" Typst language syntax
-Plug 'kaarmu/typst.vim'
-
 " Icons for the status line
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -38,17 +35,16 @@ Plug 'lepture/vim-jinja'
 " Colours
 Plug 'norcalli/nvim-colorizer.lua'
 
-" VimTeX
-"Plug 'lervag/vimtex'
-
 " Show Typst emoji, etc.
 Plug 'MrPicklePinosaur/typst-conceal.vim', {'for': 'typst'}
 
 " Syntax highlighting for the Fish shell
 Plug 'nickeb96/fish.vim'
 
-" LSP
+" LSP and Mason
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 
 " Required by Telescope
 Plug 'nvim-lua/plenary.nvim'
