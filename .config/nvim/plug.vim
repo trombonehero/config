@@ -32,6 +32,9 @@ Plug 'lewis6991/gitsigns.nvim'
 " Jinja2 syntax
 Plug 'lepture/vim-jinja'
 
+" CSV syntax
+Plug 'mechatroner/rainbow_csv'
+
 " Colours
 Plug 'norcalli/nvim-colorizer.lua'
 
