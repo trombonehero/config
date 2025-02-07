@@ -1,5 +1,31 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+palette = "gruvbox_light"
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#fe8019'
+color_purple = '#d3869b'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[palettes.gruvbox_light]
+color_fg0 = '#3c3836'
+color_bg1 = '#ebdbb2'
+color_bg3 = '#bdae93'
+color_blue = '#076678'
+color_aqua = '#427b58'
+color_green = '#79740e'
+color_orange = '#d65d0e'
+color_purple = '#8f3f71'
+color_red = '#9d0006'
+color_yellow = '#b57614'
+
 [aws]
 disabled = true
 
