@@ -1,5 +1,5 @@
 if status is-interactive
-    if which starship
+    if which starship > /dev/null
         starship init fish | source
     end
 end
