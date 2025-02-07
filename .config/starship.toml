@@ -29,11 +29,35 @@ color_yellow = '#b57614'
 [aws]
 disabled = true
 
+
+[os.symbols]
+Macos = "󰀵"
+
+[directory]
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+format = '[ $symbol $branch]($style)'
+
 [c]
 disabled = true
+symbol = " "
 
 [docker_context]
 disabled = true
 
 [git_status]
 ignore_submodules = true
+
+[rust]
+symbol = ""
+format = ' $symbol( $version)'
+
+[golang]
+symbol = ""
+format = ' $symbol( $version)'
+
+[python]
+symbol = ""
+format = ' $symbol( $version)'
