@@ -14,9 +14,8 @@ set termguicolors
 let g:neovide_transparency=0.9
 let g:transparency=0.9
 
-if exists("g:neovide")
-	autocmd VimEnter * TransparentDisable
-end
+" Use the colour scheme's background colour
+autocmd VimEnter * TransparentDisable
 
 " Set up status line
 autocmd VimEnter * lua require("lualine").setup()
