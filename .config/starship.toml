@@ -1,5 +1,11 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = """
+ $os$hostname$username $directory$git_branch [$c$rust$python](color_purple)\
+$line_break$character"""
+
+right_format = "$time"
+
 palette = "gruvbox_light"
 
 [palettes.gruvbox_dark]
@@ -29,15 +35,31 @@ color_yellow = '#b57614'
 [aws]
 disabled = true
 
+[os]
+disabled = false
 
 [os.symbols]
 Macos = "󰀵"
 
+[hostname]
+ssh_only = false
+format = '[ $ssh_symbol$hostname]($style)'
+style = "color_purple"
+
+[username]
+format = '[ $user]($style)'
+style_user = "color_blue"
+style_root = "color_red"
+
 [directory]
+style = "color_orange"
+before_repo_root_style = "color_yellow"
+repo_root_style = "color_aqua"
 truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
+style = "color_green"
 format = '[ $symbol $branch]($style)'
 
 [c]
@@ -52,12 +74,20 @@ ignore_submodules = true
 
 [rust]
 symbol = ""
+style = "bg:color_orange"
 format = ' $symbol( $version)'
 
 [golang]
 symbol = ""
+style = "bg:color_orange"
 format = ' $symbol( $version)'
 
 [python]
 symbol = ""
+style = "bg:color_orange"
 format = ' $symbol( $version)'
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[  $time ](fg:color_blue)'
