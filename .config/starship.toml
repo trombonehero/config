@@ -64,6 +64,7 @@ Pop = "[](color_aqua)"
 
 [hostname]
 ssh_only = false
+ssh_symbol = "󰲝 "
 format = '[ $ssh_symbol$hostname]($style)'
 style = "color_purple"
 
