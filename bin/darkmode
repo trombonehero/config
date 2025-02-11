@@ -31,23 +31,23 @@ if [ (uname -s) = "Darwin" ]
 end
 
 if [ -f ~/.config/alacritty/alacritty.toml ]
-    sed -i '' "s/base16-gruvbox-[a-z]*-/base16-gruvbox-$lower-/" ~/.config/alacritty/alacritty.toml
+    sed -i'' "s/base16-gruvbox-[a-z]*-/base16-gruvbox-$lower-/" ~/.config/alacritty/alacritty.toml
 end
 
 if [ -f ~/.config/bat/config ]
-    sed -i '' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/bat/config
+    sed -i'' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/bat/config
 end
 
 if [ -f ~/.config/starship.toml ]
-    sed -i '' "s/palette = .*/\palette = \"gruvbox_$lower\"/" ~/.config/starship.toml
+    sed -i'' "s/palette = .*/\palette = \"gruvbox_$lower\"/" ~/.config/starship.toml
 end
 
 if [ -f ~/.config/wezterm/wezterm ]
-    sed -i '' "s/\"Gruvbox .*\"/\"Gruvbox $upper\"/" ~/.config/wezterm/wezterm.lua
+    sed -i'' "s/\"Gruvbox .*\"/\"Gruvbox $upper\"/" ~/.config/wezterm/wezterm.lua
 end
 
 if [ -f ~/.local/vimrc ]
-    sed -i '' "s/^set background=.*/set background=$lower/" ~/.local/vimrc
+    sed -i'' "s/^set background=.*/set background=$lower/" ~/.local/vimrc
 end
 
 if [ -f (which nvr) ]
