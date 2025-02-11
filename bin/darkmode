@@ -51,9 +51,21 @@ if [ -f ~/.local/vimrc ]
 end
 
 if [ -f (which nvr) ]
-    for neovim_socket in (ls /var/folders/**/nvim.jon/**/nvim.*)
-        nvr --servername $neovim_socket --remote-send "<esc>:set background=$lower<cr>"
+    switch (uname)
+        case Darwin
+            set nvim_control_dirs /var/folders/**/nvim.jon
+        case '*'
+            set nvim_control_dirs /var/run/user/(id -u)
+
     end
+
+    find $nvim_control_dirs \
+        -name 'nvim.*' \
+        -exec \
+            nvr \
+            --servername {} \
+            --remote-send "<esc>:set background=$lower<cr>" \
+            \;
 end
 
 tmux set -g @tmux-gruvbox $lower
