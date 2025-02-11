@@ -46,6 +46,10 @@ if [ -f ~/.config/wezterm/wezterm ]
     sed -i'' "s/\"Gruvbox .*\"/\"Gruvbox $upper\"/" ~/.config/wezterm/wezterm.lua
 end
 
+if [ -f ~/.config/xfce4/terminal/terminalrc-$lower ]
+    cp ~/.config/xfce4/terminal/terminalrc-$lower ~/.config/xfce4/terminal/terminalrc
+end
+
 if [ -f ~/.local/vimrc ]
     sed -i'' "s/^set background=.*/set background=$lower/" ~/.local/vimrc
 end
