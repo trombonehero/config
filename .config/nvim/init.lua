@@ -20,6 +20,9 @@ require('colorizer').setup()
 -- Set up Git status symbols
 require('gitsigns').setup()
 
+-- Set up outlining
+require('outline').setup()
+
 -- Set up tree view
 require("nvim-tree").setup()
 

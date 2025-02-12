@@ -16,6 +16,9 @@ Plug 'ellisonleao/gruvbox.nvim'
 " Pretty presentation of diagnostics
 Plug 'folke/trouble.nvim'
 
+" Outlining
+Plug 'hedyhli/outline.nvim'
+
 " DBML: a nice database modeling language
 Plug 'jidn/vim-dbml'
 
