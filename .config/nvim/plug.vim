@@ -19,6 +19,9 @@ Plug 'folke/trouble.nvim'
 " Outlining
 Plug 'hedyhli/outline.nvim'
 
+" Asciidoctor
+Plug 'habamax/vim-asciidoctor'
+
 " DBML: a nice database modeling language
 Plug 'jidn/vim-dbml'
 
