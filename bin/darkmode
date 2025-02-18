@@ -57,19 +57,20 @@ end
 if [ -f (which nvr) ]
     switch (uname)
         case Darwin
-            set nvim_control_dirs /var/folders/**/nvim.jon
+            set nvim_control_dirs /var/folders
         case '*'
             set nvim_control_dirs /var/run/user/(id -u)
 
     end
 
     find $nvim_control_dirs \
-        -name 'nvim.*' \
+        -name 'nvim\.[0-9\.]*' \
         -exec \
             nvr \
             --servername {} \
             --remote-send "<esc>:set background=$lower<cr>" \
-            \;
+            \; \
+	    2> /dev/null
 end
 
 tmux set -g @tmux-gruvbox $lower
