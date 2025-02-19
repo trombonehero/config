@@ -59,7 +59,7 @@ if [ -f (which nvr) ]
         case Darwin
             set nvim_control_dirs /var/folders
         case '*'
-            set nvim_control_dirs /var/run/user/(id -u)
+            set nvim_control_dirs /tmp/nvim.* /tmp/sway.(whoami) /var/run/user/(id -u)
 
     end
 
