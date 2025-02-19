@@ -66,8 +66,9 @@ if [ -f (which nvr) ]
     find $nvim_control_dirs \
         -name 'nvim\.[0-9\.]*' \
         -exec \
-            nvr \
-            --servername {} \
+            nvim \
+            --remote \
+            --server {} \
             --remote-send "<esc>:set background=$lower<cr>" \
             \; \
 	    2> /dev/null
