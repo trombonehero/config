@@ -71,7 +71,7 @@ if [ -f (which nvr) ]
             --server {} \
             --remote-send "<esc>:set background=$lower<cr>" \
             \; \
-	    2> /dev/null
+        2> /dev/null
 end
 
 tmux set -g @tmux-gruvbox $lower
