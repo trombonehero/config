@@ -16,6 +16,7 @@
 	"cpu",
 	"memory",
 	"temperature",
+        "custom/keyboard",
 	"battery",
 	"clock"
     ],
@@ -48,6 +49,11 @@
         "critical-threshold": 80,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
+    },
+    "custom/keyboard": {
+        "exec": "waybar-kbd-state",
+        "interval": 5,
+        "on-click": "sway input type:keyboard events toggle"
     },
     "battery": {
         "states": {
