@@ -22,6 +22,12 @@ Plug 'hedyhli/outline.nvim'
 " Asciidoctor
 Plug 'habamax/vim-asciidoctor'
 
+" DAP: Debug Adapter Protocol
+Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
+
 " DBML: a nice database modeling language
 Plug 'jidn/vim-dbml'
 

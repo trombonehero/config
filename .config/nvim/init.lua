@@ -26,6 +26,9 @@ require('outline').setup()
 -- Set up tree view
 require("nvim-tree").setup()
 
+-- Set up debugging UI
+require("dapui").setup()
+
 -- Set up Rust tools
 require("rust-tools").setup()
 
