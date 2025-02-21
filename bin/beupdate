@@ -42,6 +42,13 @@ mount -t nullfs /var/cache $MOUNTPOINT/var/cache
 env ABI=${ABI} pkg-static -r $MOUNTPOINT update
 
 BASE_PACKAGES=`pkg-static -r $MOUNTPOINT search -g 'FreeBSD-*' | awk '!/-dbg-|-lib32-|-liby/{ print $1 }'`
+
+if [ "$BASE_PACKAGES" == "" ]
+then
+  echo "No base packages found"
+  exit 1
+fi
+
 env ABI=${ABI} pkg-static -r $MOUNTPOINT install -y -f $BASE_PACKAGES
 env ABI=${ABI} pkg-static -r $MOUNTPOINT upgrade -y
 
