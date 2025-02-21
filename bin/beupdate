@@ -5,7 +5,7 @@
 : ${REPO:="${REPO_BASE}/${CHANNEL}"}
 
 cleanup() {
-  rmdir $MOUNTPOINT/$MOUNTPOINT
+  rmdir $MOUNTPOINT/$MOUNTPOINT || true
   umount $MOUNTPOINT/var/cache
   umount $MOUNTPOINT/dev
   umount $MOUNTPOINT
