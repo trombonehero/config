@@ -17,7 +17,7 @@
 	"memory",
 	"temperature",
         "custom/keyboard",
-	"battery",
+        "upower",
 	"clock"
     ],
     "sway/scratchpad": {
@@ -54,18 +54,6 @@
         "exec": "waybar-kbd-state",
         "interval": 5,
         "on-click": "sway input type:keyboard events toggle"
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 50,
-            "critical": 20
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "interface": "wlan0", // (Optional) To force the use of this interface
