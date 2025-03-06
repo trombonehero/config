@@ -55,6 +55,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 
+" Sway config file syntax
+Plug 'jamespeapen/swayconfig.vim'
+
 " Required by Telescope
 Plug 'nvim-lua/plenary.nvim'
 
