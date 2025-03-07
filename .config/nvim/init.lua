@@ -27,7 +27,28 @@ require('outline').setup()
 require("nvim-tree").setup()
 
 -- Set up debugging UI
-require("dapui").setup()
+require("dapui").setup({
+  layouts = {
+    {
+      position = "left",
+      size = 40,
+      elements = {
+        { id = "stacks",      size = 0.2 },
+        { id = "scopes",      size = 0.6 },
+        { id = "watches",     size = 0.1 },
+        { id = "breakpoints", size = 0.1 },
+      },
+    },
+    {
+      position = "bottom",
+      size = 10,
+      elements = {
+        { id = "console", size = 0.5 },
+        { id = "repl",    size = 0.5 },
+      },
+    },
+  },
+})
 
 -- Set up Python debugging
 require("dap-python").setup("uv")
