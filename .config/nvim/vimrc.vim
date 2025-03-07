@@ -14,7 +14,7 @@ nnoremap <leader>du <cmd>lua require("dapui").toggle()<CR>
 nnoremap <C-n> <Cmd>lua require("dap").step_over()<CR>
 nnoremap <C-i> <Cmd>lua require("dap").step_into()<CR>
 nnoremap <C-o> <Cmd>lua require("dap").step_out()<CR>
-nnoremap <C-r> <Cmd>lua require("dap").repl.open()<CR>
+nnoremap <C-r> <Cmd>lua require("dap").repl.toggle()<CR>
 
 nnoremap <C-k> <Cmd>lua require("dapui").eval()<CR>
 nnoremap <C-k> <Cmd>lua require("dapui").eval()<CR>
