@@ -29,6 +29,16 @@ require("nvim-tree").setup()
 -- Set up debugging UI
 require("dapui").setup()
 
+-- Set up Python debugging
+require("dap-python").setup("uv")
+require("nvim-dap-virtual-text").setup({
+  highlight_changed_variables = true,
+  highlight_new_as_changed = true,
+  show_stop_reason = true,
+  commented = true,
+  all_frames = true,
+})
+
 -- Set up Rust tools
 require("rust-tools").setup()
 
