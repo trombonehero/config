@@ -9,7 +9,7 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " Debugging UI
 nnoremap <C-B> <Cmd>lua require("dap").toggle_breakpoint()<CR>
-nnoremap <leader>du <cmd>lua require("dapui").toggle()<CR>
+nnoremap <leader>d <cmd>lua require("dapui").toggle()<CR>
 nnoremap <C-n> <Cmd>lua require("dap").step_over()<CR>
 nnoremap <C-i> <Cmd>lua require("dap").step_into()<CR>
 nnoremap <C-o> <Cmd>lua require("dap").step_out()<CR>
