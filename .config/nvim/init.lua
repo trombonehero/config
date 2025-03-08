@@ -50,6 +50,9 @@ require("dapui").setup({
   },
 })
 
+vim.fn.sign_define('DapBreakpoint',{ text ='🟥', texthl ='', linehl ='', numhl =''})
+vim.fn.sign_define('DapStopped',{ text ='➤', texthl ='', linehl ='', numhl =''})
+
 -- Set up Python debugging
 require("dap-python").setup("uv")
 require("nvim-dap-virtual-text").setup({
