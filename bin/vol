@@ -4,7 +4,7 @@ NOTIFICATION_FIFO=$XDG_RUNTIME_DIR/volume.fifo
 
 mixer vol $1
 
-if [ -e $XDG_RUNTIME_DIR/wob.fifo ] && which -s wob
+if [ -e $XDG_RUNTIME_DIR/volume.fifo ] && which -s wob
 then
 	mixer vol | sed 's/.*://' > $XDG_RUNTIME_DIR/volume.fifo
 fi
