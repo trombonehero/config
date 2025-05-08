@@ -1,6 +1,6 @@
 function cat
   if which bat > /dev/null
-    bat $argv
+    bat --paging=never $argv
   else
     /bin/cat $argv
   end
