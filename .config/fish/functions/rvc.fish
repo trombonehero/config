@@ -1,3 +1,3 @@
 function rvc
-	riscv32-esp-elf-cc -O1 -S $argv -o - | pygmentize -l asm
+	clang --target=riscv32 -march=rv32i -S $argv -o - | pygmentize -l asm
 end
