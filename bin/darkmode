@@ -21,6 +21,10 @@ if [ -f ~/.config/bat/config ]
     sed -i '' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/bat/config
 end
 
+if [ -f ~/.config/fish/functions/rvc.fish ]
+    sed -i '' "s/\"gruvbox-.*\"/\"gruvbox-$lower\"/" ~/.config/fish/functions/rvc.fish
+end
+
 if [ -f ~/.config/starship.toml ]
     sed -i '' "s/palette = .*/\palette = \"gruvbox_$lower\"/" ~/.config/starship.toml
 end
