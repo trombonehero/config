@@ -50,6 +50,9 @@ then
 fi
 
 env ABI=${ABI} pkg -r $MOUNTPOINT install -y -f $BASE_PACKAGES
+
+# Update ports, some of which rely on Linux emulation
+kldload linux64
 env ABI=${ABI} pkg -r $MOUNTPOINT upgrade -y
 
 # Activate the new BE for the next boot only
